@@ -55,6 +55,7 @@ Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
+Plug 'vifm/vifm.vim'
 
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

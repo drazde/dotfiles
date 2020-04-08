@@ -55,7 +55,6 @@ Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
-Plug 'vifm/vifm.vim'
 
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -162,7 +161,7 @@ au Filetype javascript set ts=4 sw=4 noexpandtab
 au Filetype xml set ts=4 sw=4 nosmarttab
 au Filetype pascal set ts=2 sw=2 nosmarttab
 au FileType json setlocal equalprg=python\ -m\ json.tool
-au BufRead *.ocs setlocal colorcolumn=30,45,75,90,116,123,126,141,157,237,267,297,687
+au BufRead *.ocs setlocal colorcolumn=1,31,46,76,91,117,124,126,127,142,144,152,158,198,238,268,298,304,310,311
 au FileType json syntax match Comment +\/\/.\+$+
 "au BufRead *.log :command W set ro!<cr>:w<cr>
 "}}}

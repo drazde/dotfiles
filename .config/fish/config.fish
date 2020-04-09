@@ -26,3 +26,7 @@ end;
 function config 
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
 end;
+
+function doc 
+    /usr/bin/git --git-dir=$HOME/doc/.git/ --work-tree=$HOME/doc $argv
+end;

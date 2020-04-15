@@ -55,6 +55,8 @@ Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
+Plug 'benmills/vimux'
+
 
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -358,9 +360,6 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 "}}}
 
-" Save buffer also with :W
-nmap <leader>w :w<cr>
-
 " Fast exit
 nmap <leader>we :w<cr>:qa!<cr>
 nmap <leader>e :qa!<cr>
@@ -463,6 +462,8 @@ map <M->> <C-W>>
 " Open terminal
 map <leader>t :vert term<cr>
 map <leader>tt :term<cr>
+
+map <leader>vp :VimuxPromptCommand<cr>
 
 " Replace the word under cursor
 nnoremap <leader>* :%s/\<<c-r><c-w>\>//gc<left><left><left>

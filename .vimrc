@@ -421,8 +421,8 @@ nnoremap <Leader>qa :bufdo :Bdelete<cr>
 if executable('rg') || executable('fzf')
     nnoremap <leader>o :Files<cr>
     nnoremap <leader>h :FZFMru<cr>
-    nnoremap <F1> :FZF ~/doc/lavoro/<cr>
-    nnoremap <F2> :FZF ~/doc/<cr>
+    nnoremap <F2> :FZF ~/doc/lavoro/<cr>
+    nnoremap <F1> :FZF ~/doc/<cr>
     nnoremap <F3> :FZF C:/jDev/sorgenti/Sipcar2/<cr>
     silent! nmap <C-P> :GFiles<cr>
 else

@@ -360,6 +360,9 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 "}}}
 
+" Save buffer also with :W
+nmap <leader>w :w<cr>
+
 " Fast exit
 nmap <leader>we :w<cr>:qa!<cr>
 nmap <leader>e :qa!<cr>

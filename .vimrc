@@ -360,6 +360,9 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 "}}}
 
+" Save buffer also with :W
+nmap <leader>w :w<cr>
+
 " Fast exit
 nmap <leader>we :w<cr>:qa!<cr>
 nmap <leader>e :qa!<cr>
@@ -429,6 +432,9 @@ else
     nnoremap <F2> :CtrlP ~/doc/<cr>
 endif
 
+" Insert date and time 
+imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>
+
 " Reload buffer and go at the end
 nnoremap <F5> :e<cr>G
 
@@ -453,7 +459,7 @@ nmap <leader><cr> a<cr><esc>
 noremap <leader>\ :s/\\/\//g<cr>
 noremap <leader>/ :s/\//\\/g<cr>
 
-" Resize windows vertically or horizontal
+" Resize windows split vertically or horizontal
 map <M--> <C-W>- 
 map <M-+> <C-W>+
 map <M-<> <C-W><
@@ -468,8 +474,9 @@ map <leader>vp :VimuxPromptCommand<cr>
 " Replace the word under cursor
 nnoremap <leader>* :%s/\<<c-r><c-w>\>//gc<left><left><left>
 
-" Insert date and time 
-imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>
+" Diff changed file with saved 
+command Diff execute 'w !diff % -'
+
 
 
 " Visual and Select mapping -------------------------------------------------{{{
@@ -486,11 +493,12 @@ vmap ,peek !boxes -d peek -a c -s 80x<cr>
 vmap ,stone !boxes -d stone -a c -s 80x<cr>
 "}}}
 
-" VimWiki maps 
+" VimWiki maps --------------------------------------------------------------{{{
 nmap <Leader>d :VimwikiTabMakeDiaryNote<cr>
 nmap <Leader>D :VimwikiMakeYesterdayDiaryNote<cr>
 "au FileType vimwiki nmap <leader>c :call ToggleCalendar()<cr>
 nmap <leader>c :call ToggleCalendar()<cr>
 au FileType vimwiki map <leader>di :VimwikiDiaryIndex<cr>
 au FileType vimwiki map <leader>s :VimwikiSearch /
+"}}}
 "}}}

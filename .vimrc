@@ -160,11 +160,19 @@ au Filetype java set ts=4 sw=4 noexpandtab "smarttab
 au Filetype javascript set ts=4 sw=4 noexpandtab
 au Filetype xml set ts=4 sw=4 nosmarttab
 au Filetype pascal set ts=2 sw=2 nosmarttab
+au Filetype php set ts=4
 au FileType json setlocal equalprg=python\ -m\ json.tool
 au FileType json syntax match Comment +\/\/.\+$+
 au FileType calendar,startify :IndentLinesDisable
 "au BufRead *.log :command W set ro!<cr>:w<cr>
 "}}}
+
+" Enable true color 
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 " Plugins option ------------------------------------------------------------{{{
 " Lightline options ---------------------------------------------------------{{{

@@ -12,6 +12,14 @@
 # show inf on my so
 #neofetch
 
+alias vi='nvim'
+alias tor=
+function tor
+    cd ~/tor-browser_it/
+    ./start-tor-browser.desktop
+end;
+
+
 function mp3
     youtube-dl --continue --ignore-errors --add-metadata --embed-thumbnail --extract-audio --audio-format mp3 $argv;
 end;

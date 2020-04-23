@@ -186,6 +186,7 @@ endif
 " Lightline options ---------------------------------------------------------{{{
 " let g:lightline = { 'colorscheme': 'wombat' }
 let g:lightline = {
+      \ 'colorscheme': 'dracula',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },

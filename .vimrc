@@ -40,7 +40,14 @@ Plug 'moll/vim-bbye'
 Plug 'andymass/vim-matchup'
 
 if executable('rg') || executable('fzf')
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    if has('unix')
+        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    else 
+        " Fix problem with user with space, example JHON DO
+        if has('win32')
+            Plug 'junegunn/fzf', { 'dir': '/d/.fzf', 'do': './install --all' }
+        endif
+    endif
     Plug 'junegunn/fzf.vim'
     Plug 'pbogut/fzf-mru.vim'
 else

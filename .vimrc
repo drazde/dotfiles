@@ -5,10 +5,13 @@ else
     if has('win32')
         "set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
         "set shell=cmd
+        let g:netrw_cygwin= 0
+        let g:netrw_scp_cmd = 'pscp.exe -i d:\id_rsa_vm_cubo.ppk'
     endif
 endif
 
 let mapleader = " "
+
 
 "language en
 
@@ -212,6 +215,7 @@ let g:vimwiki_list = [{'path': '~/doc/', 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_slow = 1
+let g:instant_markdown_browser = "firefox"
 
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1

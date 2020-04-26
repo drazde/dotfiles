@@ -1,0 +1,31 @@
+[user]
+    name = Marco Andreolli 
+    email = drazde@gmail.com
+
+[sendemail]
+    smtpserver = C:/Program Files (x86)/Git/mingw/bin/msmtp.exe
+
+[push]
+    default = simple
+
+[alias]
+    c = commit
+    ck = checkout
+    s = status
+    lg = log --stat
+    last = log -1 HEAD
+    f = push --force-with-lease
+    ss = "!f() { git stash show stash^{/$*} -p; }; f"
+    sa = "!f() { git stash apply stash^{/$*}; }; f"
+    sl = stash list
+    d = difftool
+    b = branch
+
+[diff]
+    tool = vimdiff
+
+[merge]
+    tool = gvimdiff
+
+[difftool]
+    prompt = false

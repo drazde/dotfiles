@@ -13,6 +13,16 @@
 #neofetch
 
 alias vi='nvim'
+alias ll='ls -la'
+
+# doftiles
+function config 
+    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
+end;
+
+function doc 
+    /usr/bin/git --git-dir=$HOME/doc/.git/ --work-tree=$HOME/doc $argv
+end;
 
 function mp3
     youtube-dl --continue --ignore-errors --add-metadata --embed-thumbnail --extract-audio --audio-format mp3 $argv;
@@ -23,12 +33,4 @@ function mount-android
 end
 function umount-android
     fusermount /mnt/key
-end;
-
-function config 
-    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
-end;
-
-function doc 
-    /usr/bin/git --git-dir=$HOME/doc/.git/ --work-tree=$HOME/doc $argv
 end;

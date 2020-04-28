@@ -1,7 +1,9 @@
 #!/bin/sh
 
 #xhost +'local:root'
-#exec gnome-session
 
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+
+#exec gnome-session
 #exec xmonad
 exec i3

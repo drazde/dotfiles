@@ -506,7 +506,7 @@ map <leader>vp :VimuxPromptCommand<cr>
 nnoremap <leader>* :%s/\<<c-r><c-w>\>//gc<left><left><left>
 
 " Diff changed file with saved 
-"command Diff execute 'w !diff % -'
+command Diff execute 'w !diff % -'
 
 
 

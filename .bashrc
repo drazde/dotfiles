@@ -17,6 +17,9 @@ fi
 
 # Put your fun stuff here.
 
+alias ll='ls -la'
+alias vi=nvim
+
 PATH="$PATH:$HOME/.cargo/bin"
 export PATH
 

@@ -67,6 +67,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'benmills/vimux'
+Plug 'junegunn/goyo.vim'
 
 
 " Intellisense engine
@@ -176,7 +177,6 @@ au FileType json setlocal equalprg=python\ -m\ json.tool
 au FileType json syntax match Comment +\/\/.\+$+
 au FileType calendar,startify :IndentLinesDisable
 "au BufRead *.log :command W set ro!<cr>:w<cr>
-"}}}
 
 " Enable true color 
 if exists('+termguicolors')
@@ -184,6 +184,18 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+" Diff current edit change with saved file
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
+"}}}
+
 
 " Plugins option ------------------------------------------------------------{{{
 " Lightline options ---------------------------------------------------------{{{

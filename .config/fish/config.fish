@@ -24,6 +24,11 @@ function doc
     /usr/bin/git --git-dir=$HOME/doc/.git/ --work-tree=$HOME/doc $argv
 end;
 
+#function media2smart_tv
+#    ffmpeg -i $argv -map 0:v -map 0:a -c:v h264 -c:a aac -->nome file
+#end;
+    
+
 function mp3
     youtube-dl --continue --ignore-errors --add-metadata --embed-thumbnail --extract-audio --audio-format mp3 $argv;
 end;
@@ -32,5 +37,5 @@ function mount-android
     go-mtpfs /mnt/key
 end
 function umount-android
-    fusermount /mnt/key
+    fusermount -u /mnt/key
 end;

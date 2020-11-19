@@ -180,7 +180,7 @@ bar {
 exec xrandr --output DP1 --mode 2560x1440 --right-of LVDS1 --primary
 
 # config background 
-exec feh --bg-scale .config/wallpaper/wallhaven-715859.jpg
+exec feh --bg-scale .config/wallpaper/wallhaven-ymzz2x.jpg
 
 # config compositor 
 exec compton --config ~/.config/compton/compton.conf

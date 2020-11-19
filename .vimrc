@@ -81,20 +81,21 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
 
-" Markdown
-Plug 'suan/vim-instant-markdown'
-
 " Snippet
 "Plug 'SirVer/ultisnips'
 
 " File detections (syntax, highlighting...)
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-call plug#end()
 
 if has('nvim')
     Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
+    " Markdown
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 endif
+
+call plug#end()
+
 "}}}
 
 " Basic options -------------------------------------------------------------{{{
@@ -195,7 +196,6 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 "}}}
-
 
 " Plugins option ------------------------------------------------------------{{{
 " Lightline options ---------------------------------------------------------{{{

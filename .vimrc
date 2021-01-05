@@ -48,7 +48,7 @@ if executable('rg') || executable('fzf')
     else 
         " Fix problem with user with space, example JHON DO
         if has('win32')
-            Plug 'junegunn/fzf', { 'dir': '/d/.fzf', 'do': './install --all' }
+            Plug 'junegunn/fzf', { 'dir': '/c/.fzf', 'do': './install --all' }
         endif
     endif
     Plug 'junegunn/fzf.vim'

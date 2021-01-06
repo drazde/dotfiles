@@ -1,0 +1,11 @@
+# Scala l'immagine a seconda della finestra
+#feh --scale-down
+
+# Scala l'immagine e visualizza solo la data di creazione (tramite exiftool)
+#feh --scale-down --info 'exiftool -DateTimeOriginal %F | cut -d : -f 2-'
+
+# Scala l'immagine e visualizza tutti i dati exif (tramite exiv2)
+#feh --scale-down --info 'exiv2 %F'
+
+feh --scale-down --draw-exif
+

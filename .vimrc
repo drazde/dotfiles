@@ -3,6 +3,11 @@ if has('unix')
     set shell=/bin/bash
 else 
     if has('win32')
+        " copy and paste with Shift+Ins and Ctrl+Ins in neovim
+        if has('nvim')
+            set mouse=a
+            source $VIMRUNTIME/mswin.vim
+        endif
         "set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
         "set shell=cmd
         let g:netrw_cygwin= 0

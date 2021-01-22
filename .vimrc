@@ -3,11 +3,6 @@ if has('unix')
     set shell=/bin/bash
 else 
     if has('win32')
-        " copy and paste with Shift+Ins and Ctrl+Ins in neovim
-        if has('nvim')
-            set mouse=a
-            source $VIMRUNTIME/mswin.vim
-        endif
         "set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
         "set shell=cmd
         let g:netrw_cygwin= 0
@@ -16,6 +11,9 @@ else
 endif
 
 let mapleader = " "
+
+set mouse=a
+source $VIMRUNTIME/mswin.vim
 
 
 "language en
@@ -139,7 +137,7 @@ set hidden
 set nojoinspaces
 set number                            " Enable line numbers
 set relativenumber                    " Relatie number (slow on old pc)
-if has("gui_running")
+if has("gui_running") || (has("nvim") && has('win32'))
     set cursorline                     
 endif
 set scrolloff=5                       " Leave 5 lines of buffer when scrolling
@@ -200,6 +198,13 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
+
+if &diff
+    "set cursorline
+    map > ]c
+    map < [c
+endif
+
 "}}}
 
 " Plugins option ------------------------------------------------------------{{{

@@ -12,8 +12,12 @@ endif
 
 let mapleader = " "
 
+" Use Ctrl+Ins and Shift+Ins for Copy and Paste in Windows, other command unmap!
 set mouse=a
 source $VIMRUNTIME/mswin.vim
+unmap <C-v>
+unmap <C-a>
+unmap <C-x>
 
 
 "language en

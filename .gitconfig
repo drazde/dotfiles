@@ -1,6 +1,9 @@
+[core]
+    autocrlf = true
+
 [user]
-    name = Marco Andreolli 
-    email = drazde@gmail.com
+    name = Marco Andreolli
+    email = marco.andreolli@cba.it
 
 [sendemail]
     smtpserver = C:/Program Files (x86)/Git/mingw/bin/msmtp.exe
@@ -8,18 +11,24 @@
 [push]
     default = simple
 
+[gui]
+    recentrepo = C:/CBA/DllOspiti
+    recentrepo = C:/CBA/Cartella Socio Sanitaria
+
 [alias]
     c = commit
     ck = checkout
     s = status
-    lg = log --stat
+    d = difftool
+    b = branch
+    lg = log --stat --graph
     last = log -1 HEAD
     f = push --force-with-lease
+        # https://stackoverflow.com/a/11688523/472927
     ss = "!f() { git stash show stash^{/$*} -p; }; f"
     sa = "!f() { git stash apply stash^{/$*}; }; f"
     sl = stash list
-    d = difftool
-    b = branch
+    fp = format-patch
 
 [diff]
     tool = vimdiff

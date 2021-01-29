@@ -80,8 +80,12 @@ Plug 'junegunn/goyo.vim'
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
+if has('win32') && has('nvim')
+"  Plug 'neovim/nvim-lspconfig'
+else 
+  "Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+  "Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
+endif
 
 " Git
 "Plug 'airblade/vim-gitgutter'
@@ -428,8 +432,8 @@ nnoremap <left> :bp<cr>
 nnoremap <right> :bn<cr>
 
 " Ctrl+C (copy to clipboard) and Ctrl+P (paste from clipboard)
-vnoremap <C-c> "+y
-imap <C-v> <esc>"+pa
+"vnoremap <C-c> "+y
+"imap <C-v> <esc>"+pa
 
 " diff-mode remap (tortoise like keys) TODO only in diff mode
 nmap <C-down> ]c
@@ -486,7 +490,7 @@ if executable('rg') || executable('fzf')
     nnoremap <leader>o :Files<cr>
     nnoremap <leader>h :FZFMru<cr>
     nnoremap <F1> :FZF ~/doc/lavoro/<cr>
-    nnoremap <F2> :FZF ~/doc/<cr>
+    nnoremap <silent> <F2> :FZF ~/doc/<cr>
     nnoremap <F3> :FZF C:/jDev/sorgenti/Sipcar2/<cr>
     silent! nmap <C-P> :GFiles<cr>
 else

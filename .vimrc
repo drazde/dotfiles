@@ -1,4 +1,5 @@
 set nocompatible
+
 if has('unix')
     set shell=/bin/bash
 else 

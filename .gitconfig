@@ -1,9 +1,9 @@
 [core]
-    autocrlf = true
+#    autocrlf = true
 
 [user]
     name = Marco Andreolli
-    email = marco.andreolli@cba.it
+    email = drazde@gmail.com
 
 [sendemail]
     smtpserver = C:/Program Files (x86)/Git/mingw/bin/msmtp.exe

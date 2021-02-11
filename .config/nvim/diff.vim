@@ -1,0 +1,18 @@
+" Diff current edit change with saved file
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
+
+if &diff
+    "set cursorline
+    map > ]c
+    map < [c
+endif
+
+" Diff changed file with saved 
+command Diff execute 'w !diff % -'

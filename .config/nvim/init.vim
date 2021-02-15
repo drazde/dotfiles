@@ -2,12 +2,14 @@ set nocompatible
 
 if has('unix')
     set shell=/bin/bash
+    let config=$HOME
 else 
     if has('win32')
         "set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
         "set shell=cmd
         let g:netrw_cygwin= 0
         let g:netrw_scp_cmd = 'pscp.exe -i d:\id_rsa_vm_cubo.ppk'
+        let config=$LOCALAPPDATA
     endif
 endif
 
@@ -182,24 +184,25 @@ let g:secure_modelines_allowed_items = [
                 \ ]
 
 
-source $HOME/.config/nvim/filetype.vim
+exec "source " . config . "/nvim/filetype.vim"
 
 
 "}}}
 
-source $HOME/.config/nvim/backup.vim
-source $HOME/.config/nvim/wildmenu.vim
-source $HOME/.config/nvim/theme.vim
-source $HOME/.config/nvim/folding.vim
-source $HOME/.config/nvim/diff.vim
-source $HOME/.config/nvim/split.vim
+
+exec "source " . config . "/nvim/backup.vim"
+exec "source " . config . "/nvim/wildmenu.vim"
+exec "source " . config . "/nvim/theme.vim"
+exec "source " . config . "/nvim/folding.vim"
+exec "source " . config . "/nvim/diff.vim"
+exec "source " . config . "/nvim/split.vim"
 
 " Plugins option 
-source $HOME/.config/nvim/lightline.vim
-source $HOME/.config/nvim/nerd.vim
-source $HOME/.config/nvim/vimwiki.vim
-source $HOME/.config/nvim/ultisnips.vim
-source $HOME/.config/nvim/fzf.vim
+exec "source " . config . "/nvim/lightline.vim"
+exec "source " . config . "/nvim/nerd.vim"
+exec "source " . config . "/nvim/vimwiki.vim"
+exec "source " . config . "/nvim/ultisnips.vim"
+exec "source " . config . "/nvim/fzf.vim"
 
 " Mapping... ----------------------------------------------------------------{{{
 " No arrow keys --- force yourself to use the home row ----------------------{{{

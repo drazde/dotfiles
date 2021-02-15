@@ -2,7 +2,7 @@ set nocompatible
 
 if has('unix')
     set shell=/bin/bash
-    let config=$HOME
+    let config=$HOME . "/.config/"
 else 
     if has('win32')
         "set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
@@ -219,7 +219,9 @@ set mouse=a
 source $VIMRUNTIME/mswin.vim
 unmap <C-v>
 unmap <C-a>
-unmap <C-x>
+if has('win32')
+    unmap <C-x>
+endif
 
 " Save buffer also with :W
 nmap <leader>w :w<cr>

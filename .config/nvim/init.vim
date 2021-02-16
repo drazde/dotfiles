@@ -1,12 +1,8 @@
-set nocompatible
-
 if has('unix')
     set shell=/bin/bash
     let config=$HOME . "/.config/"
 else 
     if has('win32')
-        "set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-        "set shell=cmd
         let g:netrw_cygwin= 0
         let g:netrw_scp_cmd = 'pscp.exe -i d:\id_rsa_vm_cubo.ppk'
         let config=$LOCALAPPDATA
@@ -14,8 +10,6 @@ else
 endif
 
 let mapleader = " "
-
-
 
 "language en
 
@@ -106,10 +100,10 @@ if has('nvim')
 endif
 
 call plug#end()
-
 "}}}
 
 " Basic options -------------------------------------------------------------{{{
+set nocompatible
 syntax on
 filetype plugin indent on
 filetype plugin on
@@ -184,12 +178,13 @@ let g:secure_modelines_allowed_items = [
                 \ ]
 
 
-exec "source " . config . "/nvim/filetype.vim"
 
 
 "}}}
 
 
+exec "source " . config . "/nvim/basic.vim"
+exec "source " . config . "/nvim/filetype.vim"
 exec "source " . config . "/nvim/backup.vim"
 exec "source " . config . "/nvim/wildmenu.vim"
 exec "source " . config . "/nvim/theme.vim"
@@ -203,119 +198,5 @@ exec "source " . config . "/nvim/nerd.vim"
 exec "source " . config . "/nvim/vimwiki.vim"
 exec "source " . config . "/nvim/ultisnips.vim"
 exec "source " . config . "/nvim/fzf.vim"
-
-" Mapping... ----------------------------------------------------------------{{{
-" No arrow keys --- force yourself to use the home row ----------------------{{{
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-"}}}
-
-" Use Ctrl+Ins and Shift+Ins for Copy and Paste in Windows, other command unmap!
-set mouse=a
-source $VIMRUNTIME/mswin.vim
-unmap <C-v>
-unmap <C-a>
-if has('win32')
-    unmap <C-x>
-endif
-
-" Save buffer also with :W
-nmap <leader>w :w<cr>
-
-" Fast exit
-nmap <leader>we :w<cr>:qa!<cr>
-nmap <leader>e :qa!<cr>
-
-" Moving lines vertically
-xnoremap K :m '<-2<cr>gv=gv
-xnoremap J :m '>+1<cr>gv=gv
-
-" Left and right can switch buffers
-nnoremap <left> :bp<cr>
-nnoremap <right> :bn<cr>
-
-inoremap jj <esc>j
-inoremap kk <esc>k
-
-" Show and Clean trailing whitespace
-nnoremap <leader>ss /\S\zs\s\+$<cr>
-nnoremap <leader>ds :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <cr>
-
-" Close buffer/buffers 
-nnoremap <Leader>q :Bdelete<cr>
-nnoremap <Leader>qa :bufdo :Bdelete<cr>
-
-" Indentation with 'Tab' and Un-Indentation with 'Shift+Tab'
-"nnoremap <Tab> >>
-"nnoremap <S-Tab> <<
-"inoremap <Tab> <C-t>
-"inoremap <S-Tab> <C-d>
-"vnoremap <Tab> >gv
-"vnoremap <S-Tab> <gv
-
-if executable('rg') || executable('fzf')
-    nnoremap <leader>o :Files<cr>
-    nnoremap <leader>h :FZFMru<cr>
-    nnoremap <F1> :FZF ~/doc/lavoro/<cr>
-    nnoremap <silent> <F2> :FZF ~/doc/<cr>
-    nnoremap <F3> :FZF C:/jDev/sorgenti/Sipcar2/<cr>
-    silent! nmap <C-P> :GFiles<cr>
-else
-    nnoremap <leader>h :CtrlPMRUFiles<cr>
-    nnoremap <F2> :CtrlP ~/doc/<cr>
-endif
-
-" Insert date and time 
-imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>
-
-" Reload buffer and go at the end
-nnoremap <F5> :e<cr>G
-
-" Toggle highlight search result
-nnoremap <F6> :set hlsearch!<cr>
-
-" Toggle highlight spellchecking
-nnoremap <F7> :set spell!<cr>
-
-" Insert path and file name of the current file 
-nnoremap <F8> :put =expand('%:p')<cr>
-
-" Grep search word under the cursor
-" https://thoughtbot.com/blog/faster-grepping-in-vim#search-for-the-word-under-the-cursor
-nnoremap <leader>K :grep! "\b<C-R><C-W>\b"<cr>:cw<cr>
-
-" Remove ^M with return
-nnoremap <leader><cr><cr> <esc>:%s/\r/\r/g<cr>
-nmap <leader><cr> a<cr><esc>
-
-" Change windows path to *nix path
-noremap <leader>\ :s/\\/\//g<cr>
-noremap <leader>/ :s/\//\\/g<cr>
-
-map <leader>vp :VimuxPromptCommand<cr>
-
-" Replace the word under cursor
-nnoremap <leader>* :%s/\<<c-r><c-w>\>//gc<left><left><left>
-
-
-" Visual and Select mapping -------------------------------------------------{{{
-" Uppercase/Lowercase selected text with Ctrl+Up or Ctrl+Down
-vmap <C-up> gU
-vmap <C-down> gu
-
-" Nice comment (with boxes)
-vmap ,mc !boxes -d c-cmt<cr>
-nmap ,mc !!boxes -d c-cmt<cr>
-vmap ,xc !boxes -d c-cmt -r<cr>
-nmap ,xc !!boxes -d c-cmt -r<cr>
-vmap ,peek !boxes -d peek -a c -s 80x<cr>
-vmap ,stone !boxes -d stone -a c -s 80x<cr>
-"}}}
-
-"}}}
 
 lua require("lsp_config")

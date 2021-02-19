@@ -62,7 +62,7 @@ Plug 'vim/killersheep'
 " VIM enhancements
 Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'benmills/vimux'
 Plug 'junegunn/goyo.vim'

@@ -64,7 +64,9 @@ Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'preservim/nerdcommenter'
 Plug 'godlygeek/tabular'
-Plug 'benmills/vimux'
+if executable('tmux') 
+  Plug 'benmills/vimux'
+endif
 Plug 'junegunn/goyo.vim'
 
 
@@ -191,6 +193,7 @@ exec "source " . config . "/nvim/theme.vim"
 exec "source " . config . "/nvim/folding.vim"
 exec "source " . config . "/nvim/diff.vim"
 exec "source " . config . "/nvim/split.vim"
+exec "source " . config . "/nvim/work.vim"
 
 " Plugins option 
 exec "source " . config . "/nvim/lightline.vim"

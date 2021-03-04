@@ -34,7 +34,6 @@ Plug 'Yggdroot/indentLine'
 "Plug 'wincent/command-t'
 "Plug 'itchyny/calendar.vim'
 Plug 'mattn/calendar-vim'
-Plug 'vimwiki/vimwiki'
 Plug 'moll/vim-bbye'
 Plug 'andymass/vim-matchup'
 
@@ -55,7 +54,6 @@ endif
 
 " Crazy stuff
 "Plug 'mattn/vim-starwars'
-"Plug 'vim/killersheep'
 
 " VIM enhancements
 Plug 'tpope/vim-surround'
@@ -114,7 +112,7 @@ exec "source " . config . "/nvim/work.vim"
 " Plugins option 
 exec "source " . config . "/nvim/lightline.vim"
 exec "source " . config . "/nvim/nerd.vim"
-exec "source " . config . "/nvim/vimwiki.vim"
+exec "source " . config . "/nvim/calendar.vim"
 exec "source " . config . "/nvim/ultisnips.vim"
 exec "source " . config . "/nvim/fzf.vim"
 

@@ -1,0 +1,23 @@
+# Considero il case se la parola/frase contiene caratteri in maiuscolo
+--smart-case
+
+# Considero anche i file esclusi da git 
+--no-ignore-vcs
+
+# Eseguo sempre ricerche letterali
+#--fixed-strings
+
+# Aggiungo il tipo Delphi 
+--type-add
+delphi:*.{pas,dfm,fr3}*
+
+# Esclusioni di file e cartelle
+--glob=!git/*
+--glob=!*.class
+--glob=!*.dcu
+--glob=!*.svg
+--glob=!bin/*
+--glob=!build/*
+--glob=!*.jar
+--glob=!__history
+--glob=!ext/*

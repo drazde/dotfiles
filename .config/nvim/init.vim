@@ -75,6 +75,7 @@ else
   "Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
   "Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
 endif
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Git
 "Plug 'airblade/vim-gitgutter'
@@ -116,4 +117,4 @@ exec "source " . config . "/nvim/calendar.vim"
 exec "source " . config . "/nvim/ultisnips.vim"
 exec "source " . config . "/nvim/fzf.vim"
 
-lua require("lsp_config")
+lua require("lua_config")

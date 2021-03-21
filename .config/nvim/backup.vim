@@ -7,9 +7,9 @@ set noswapfile                    " it's 2013, Vim.
 set undolevels=1000
 set undoreload=10000
 
-set undodir=~/.vim/tmp/undo//     " undo files
-set backupdir=~/.vim/tmp/backup// " backups
-set directory=~/.vim/tmp/swap//   " swap files
+set undodir=~/.cache/vim//tmp/undo//     " undo files
+set backupdir=~/.cache/vim/tmp/backup// " backups
+set directory=~/.cache/vim/tmp/swap//   " swap files
 
 " Session load/save
 "set sessionoptions+=resize,winpos

@@ -81,12 +81,6 @@ Plug 'junegunn/goyo.vim'
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-if has('win32') && has('nvim')
-"  Plug 'neovim/nvim-lspconfig'
-else 
-  "Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-  "Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
-endif
 
 " Git
 "Plug 'airblade/vim-gitgutter'
@@ -100,12 +94,6 @@ Plug 'jreybert/vimagit'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-if has('nvim')
-    Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
-    " Markdown
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-endif
-
 call plug#end()
 
 "}}}
@@ -114,9 +102,7 @@ call plug#end()
 syntax on
 filetype plugin indent on
 filetype plugin on
-if !has("nvim")
-    set renderoptions=type:directx
-endif
+set renderoptions=type:directx
 set encoding=utf-8
 set fileencoding=utf-8
 set spelllang=it                      " Spell check
@@ -146,7 +132,7 @@ set hidden
 set nojoinspaces
 set number                            " Enable line numbers
 set relativenumber                    " Relatie number (slow on old pc)
-if has("gui_running") || (has("nvim") && has('win32'))
+if has("gui_running") || has('win32')
     set cursorline                     
 endif
 set scrolloff=5                       " Leave 5 lines of buffer when scrolling

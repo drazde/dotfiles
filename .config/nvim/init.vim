@@ -1,6 +1,6 @@
 if has('unix')
     set shell=/bin/bash
-    let config=$HOME . "/.config/"
+    let config=$HOME . "/.config"
 else 
     if has('win32')
         let g:netrw_cygwin= 0
@@ -66,7 +66,6 @@ Plug 'junegunn/goyo.vim'
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-"if has('win32') && has('nvim')
 if has('nvim')
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
@@ -108,7 +107,6 @@ exec "source " . config . "/nvim/theme.vim"
 exec "source " . config . "/nvim/folding.vim"
 exec "source " . config . "/nvim/diff.vim"
 exec "source " . config . "/nvim/split.vim"
-exec "source " . config . "/nvim/work.vim"
 
 " Plugins option 
 exec "source " . config . "/nvim/lightline.vim"
@@ -116,5 +114,9 @@ exec "source " . config . "/nvim/nerd.vim"
 exec "source " . config . "/nvim/calendar.vim"
 exec "source " . config . "/nvim/ultisnips.vim"
 exec "source " . config . "/nvim/fzf.vim"
+
+if has('win')
+  exec "source " . config . "/nvim/work.vim"
+endif
 
 lua require("lua_config")

@@ -1,7 +1,7 @@
 " FZF
 " FZF force to use RG 
 " If you want gitignored files:
-let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden -g "!diary/*" -g "!.git/*" -g "!*/.git/*"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden -g !.git -g !js_libs'
 
 " Rg/Ag options
 if executable('ag')

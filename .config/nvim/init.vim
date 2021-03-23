@@ -115,7 +115,7 @@ exec "source " . config . "/nvim/calendar.vim"
 exec "source " . config . "/nvim/ultisnips.vim"
 exec "source " . config . "/nvim/fzf.vim"
 
-if has('win')
+if has('win32')
   exec "source " . config . "/nvim/work.vim"
 endif
 

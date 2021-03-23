@@ -74,7 +74,9 @@ Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
-Plug 'benmills/vimux'
+if executable('rg')
+  Plug 'benmills/vimux'
+endif
 Plug 'junegunn/goyo.vim'
 
 

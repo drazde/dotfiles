@@ -28,7 +28,6 @@ Plug 'scrooloose/nerdtree'                           " Nerdtree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'       " Highlighting Nerdtree
 Plug 'ryanoasis/vim-devicons'                        " Icons for Nerdtree
 Plug 'itchyny/lightline.vim'
-Plug 'w0rp/ale', { 'on':  'ALEToggle' }
 Plug 'Yggdroot/indentLine'
 "Plug 'wincent/ferret'
 "Plug 'wincent/command-t'
@@ -64,8 +63,9 @@ Plug 'junegunn/goyo.vim'
 
 
 " Intellisense engine
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'w0rp/ale', { 'on':  'ALEToggle' }
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 if has('nvim')
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
@@ -75,6 +75,7 @@ else
   "Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
 endif
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 " Git
 "Plug 'airblade/vim-gitgutter'

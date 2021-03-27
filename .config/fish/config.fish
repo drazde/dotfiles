@@ -39,3 +39,9 @@ end
 function umount-android
     fusermount -u /mnt/key
 end;
+
+
+#fish_add_path "$HOME/.node_modules/bin" # fish >= 3.2.0
+set -x PATH "$HOME/.node_modules/bin:$PATH"
+set -x PATH "$HOME/bin:$PATH"
+set -x npm_config_prefix ~/.node_modules

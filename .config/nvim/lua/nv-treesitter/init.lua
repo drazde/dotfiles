@@ -1,4 +1,5 @@
 require'nvim-treesitter.configs'.setup {
+  -- Highlight
   highlight = {
     enable = true,
     custom_captures = {
@@ -17,22 +18,26 @@ require'nvim-treesitter.configs'.setup {
     },
   },
 
+  -- Indent
   indent = {
     enable = true
-  }
-}
+  },
 
-require "nvim-treesitter.configs".setup {
+  -- Playground
   playground = {
     enable = true,
     disable = {},
     updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
     persist_queries = false -- Whether the query persists across vim sessions
-  }
+  },
+
+  rainbow = {enable = true}
 }
+
 
 --vim.api.nvim_exec([[
 --    set foldermethod=expr
 --    set foldexpr=nvim_treesitter#foldexpr()
 --]], true)
 --
+

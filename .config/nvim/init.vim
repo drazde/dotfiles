@@ -75,6 +75,7 @@ Plug 'kabouzeid/nvim-lspinstall'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+Plug 'p00f/nvim-ts-rainbow'
 
 " Git
 "Plug 'airblade/vim-gitgutter'

@@ -64,16 +64,15 @@ Plug 'junegunn/goyo.vim'
 
 " Intellisense engine
 "Plug 'w0rp/ale', { 'on':  'ALEToggle' }
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-if has('nvim')
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
-    Plug 'nvim-lua/diagnostic-nvim'
-else 
-  "Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-  "Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
-endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/diagnostic-nvim'
+Plug 'kabouzeid/nvim-lspinstall'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
@@ -120,4 +119,4 @@ if has('win32')
   exec "source " . config . "/nvim/work.vim"
 endif
 
-lua require("lua_config")
+lua require("init")

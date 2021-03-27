@@ -5,6 +5,7 @@ CACHE_PATH = vim.fn.stdpath('cache')
 require('lsp')
 require('lsp.python-ls')
 require('lsp.js-ts-ls')
+require('lsp.lua-ls')
 
 -- TreeSitter
 require('treesitter_config')

@@ -2,8 +2,8 @@
 " NOTA: solo impostazioni che non cesessitano di plugin o setup particolari
 " in modo che questo file sia portabile (come init.vim o .vimrc)
 
-syntax on
-filetype plugin indent on
+"syntax on
+"filetype plugin indent on
 filetype plugin on
 "set encoding=utf-8
 set fileencoding=utf-8
@@ -20,7 +20,7 @@ set ttyfast                           " Send more characters in fast /erminals
 set noerrorbells novisualbell         " Turn off visual and audible bells
 set history=500
 "set hlsearch                          " Highlight search results
-set ignorecase smartcase              " Search queries intelligently set case
+"set ignorecase smartcase              " Search queries intelligently set case
 set incsearch                         " Show search results as you type
 set timeoutlen=500 ttimeoutlen=0      " Remove timeout when hitting escape
 set showcmd                           " Show size of visual selection
@@ -29,15 +29,15 @@ set colorcolumn=80                    " Show text limit to 80 char
 set vb t_vb=                          " No more beeps
 set showcmd                           " Show (partial) command in status line.
 set noshowmode
-set hidden
-set nojoinspaces
-set number                            " Enable line numbers
-set relativenumber                    " Relatie number (slow on old pc)
-if has("gui_running") || (has("nvim") && has('win32'))
-    set cursorline                     
-endif
-set scrolloff=5                       " Leave 5 lines of buffer when scrolling
-set sidescrolloff=10                  " Leave 10 char when horizontal scrolling
+"set hidden
+"set nojoinspaces
+"set number                            " Enable line numbers
+"set relativenumber                    " Relatie number (slow on old pc)
+"if has("gui_running") || (has("nvim") && has('win32'))
+"    set cursorline                     
+"endif
+"set scrolloff=5                       " Leave 5 lines of buffer when scrolling
+"set sidescrolloff=10                  " Leave 10 char when horizontal scrolling
 if has('gui')
     set guifont=Fira_Mono_for_Powerline:h10
     set guioptions-=T                 " Remove toolbar
@@ -47,20 +47,20 @@ if has('gui')
     set guioptions-=l
     set guioptions-=r                 " Remove vertical scrollbar
 endif
-set synmaxcol=500                     " Max char for line
+"set synmaxcol=500                     " Max char for line
 set tags=.git/tags                    " Hide ctags in .git
 set diffopt+=vertical                 " Gdiff compare file in vertical
-set nowrapscan                        " Search don't restart to begin
-set mousefocus                        " gvim, move focus between windows
-set autochdir                         " chdir to dir of current buffer selected 
+"set nowrapscan                        " Search don't restart to begin
+"set mousefocus                        " gvim, move focus between windows
+"set autochdir                         " chdir to dir of current buffer selected 
 
-set exrc                              " Lvimrc
-set secure
+"set exrc                              " Lvimrc
+"set secure
 
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set nowrap
+"set shiftwidth=4
+"set softtabstop=4
+"set expandtab
+"set nowrap
 
 let g:secure_modelines_allowed_items = [
                 \ "textwidth",   "tw",

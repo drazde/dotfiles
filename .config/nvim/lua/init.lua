@@ -1,6 +1,9 @@
 DATA_PATH = vim.fn.stdpath('data')
 CACHE_PATH = vim.fn.stdpath('cache')
 
+-- Basic settings
+require('settings')
+
 -- LSP
 require('lsp')
 require('lsp.python-ls')

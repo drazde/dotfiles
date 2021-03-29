@@ -2,17 +2,16 @@
 " NOTA: solo impostazioni che non cesessitano di plugin o setup particolari
 " in modo che questo file sia portabile (come init.vim o .vimrc)
 
-set nocompatible
 syntax on
 filetype plugin indent on
 filetype plugin on
-set encoding=utf-8
+"set encoding=utf-8
 set fileencoding=utf-8
-set spelllang=it                      " Spell check
+"set spelllang=it                      " Spell check
 set autoindent                        " Autoindent on newline
 set autoread                          " Auto reload changed files
 set backspace=indent,eol,start        " http://vi.stackexchange.com/a/2163
-set laststatus=2                      " Show status line on startup
+"set laststatus=2                      " Show status line on startup
 set lazyredraw                        " Reduce the redraw frequency
 set ttyfast                           " Send more characters in fast /erminals
 "set listchars=extends:→               " Show arrow if line continues rightwards
@@ -20,12 +19,12 @@ set ttyfast                           " Send more characters in fast /erminals
 "set list
 set noerrorbells novisualbell         " Turn off visual and audible bells
 set history=500
-set hlsearch                          " Highlight search results
+"set hlsearch                          " Highlight search results
 set ignorecase smartcase              " Search queries intelligently set case
 set incsearch                         " Show search results as you type
 set timeoutlen=500 ttimeoutlen=0      " Remove timeout when hitting escape
 set showcmd                           " Show size of visual selection
-set ruler                             " show the cursor position all the time
+"set ruler                             " show the cursor position all the time
 set colorcolumn=80                    " Show text limit to 80 char
 set vb t_vb=                          " No more beeps
 set showcmd                           " Show (partial) command in status line.

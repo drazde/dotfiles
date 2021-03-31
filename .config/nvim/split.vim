@@ -1,8 +1,3 @@
-lua << EOF
-vim.o.splitbelow = true -- Horizontal splits will automatically be below
-vim.o.splitright = true -- Vertical splits will automatically be to the right
-EOF
-
 " Split movement
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j

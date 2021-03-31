@@ -57,9 +57,10 @@ endif
 " VIM enhancements
 Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdcommenter'
+"Plug 'preservim/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
+Plug 'terrortylor/nvim-comment'
 
 
 " Intellisense engine

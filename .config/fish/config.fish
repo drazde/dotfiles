@@ -29,7 +29,7 @@ end;
 #end;
     
 
-function mp3
+function youtube-dl-mp3
     youtube-dl --continue --ignore-errors --add-metadata --embed-thumbnail --extract-audio --audio-format mp3 $argv;
 end;
 

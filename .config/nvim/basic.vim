@@ -4,31 +4,31 @@
 
 "syntax on
 "filetype plugin indent on
-filetype plugin on
+"filetype plugin on
 "set encoding=utf-8
-set fileencoding=utf-8
+"set fileencoding=utf-8
 "set spelllang=it                      " Spell check
-set autoindent                        " Autoindent on newline
-set autoread                          " Auto reload changed files
-set backspace=indent,eol,start        " http://vi.stackexchange.com/a/2163
+"set autoindent                        " Autoindent on newline
+"set autoread                          " Auto reload changed files
+"set backspace=indent,eol,start        " http://vi.stackexchange.com/a/2163
 "set laststatus=2                      " Show status line on startup
-set lazyredraw                        " Reduce the redraw frequency
-set ttyfast                           " Send more characters in fast /erminals
+"set lazyredraw                        " Reduce the redraw frequency
+"set ttyfast                           " Send more characters in fast /erminals
 "set listchars=extends:→               " Show arrow if line continues rightwards
 "set listchars+=precedes:←             " Show arrow if line continues leftwards
 "set list
-set noerrorbells novisualbell         " Turn off visual and audible bells
-set history=500
+"set noerrorbells novisualbell         " Turn off visual and audible bells
+"set history=500
 "set hlsearch                          " Highlight search results
 "set ignorecase smartcase              " Search queries intelligently set case
-set incsearch                         " Show search results as you type
-set timeoutlen=500 ttimeoutlen=0      " Remove timeout when hitting escape
-set showcmd                           " Show size of visual selection
+"set incsearch                         " Show search results as you type
+"set timeoutlen=500 ttimeoutlen=0      " Remove timeout when hitting escape
+"set showcmd                           " Show size of visual selection
 "set ruler                             " show the cursor position all the time
-set colorcolumn=80                    " Show text limit to 80 char
-set vb t_vb=                          " No more beeps
-set showcmd                           " Show (partial) command in status line.
-set noshowmode
+"set colorcolumn=80                    " Show text limit to 80 char
+"set vb t_vb=                          " No more beeps
+"set showcmd                           " Show (partial) command in status line.
+"set noshowmode
 "set hidden
 "set nojoinspaces
 "set number                            " Enable line numbers
@@ -48,8 +48,8 @@ if has('gui')
     set guioptions-=r                 " Remove vertical scrollbar
 endif
 "set synmaxcol=500                     " Max char for line
-set tags=.git/tags                    " Hide ctags in .git
-set diffopt+=vertical                 " Gdiff compare file in vertical
+"set tags=.git/tags                    " Hide ctags in .git
+"set diffopt+=vertical                 " Gdiff compare file in vertical
 "set nowrapscan                        " Search don't restart to begin
 "set mousefocus                        " gvim, move focus between windows
 "set autochdir                         " chdir to dir of current buffer selected 
@@ -87,7 +87,7 @@ inoremap <right> <nop>
 "}}}
 
 " Use Ctrl+Ins and Shift+Ins for Copy and Paste in Windows, other command unmap!
-set mouse=a
+"set mouse=a
 source $VIMRUNTIME/mswin.vim
 unmap <C-v>
 unmap <C-a>

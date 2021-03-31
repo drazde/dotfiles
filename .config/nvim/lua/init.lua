@@ -5,6 +5,8 @@ CACHE_PATH = vim.fn.stdpath('cache')
 require('settings')
 require('nv-comment')
 
+-- Git
+require('nv-gitblame')
 
 -- LSP
 require('lsp')

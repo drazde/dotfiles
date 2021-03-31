@@ -82,6 +82,7 @@ Plug 'p00f/nvim-ts-rainbow'
 "Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
+Plug 'f-person/git-blame.nvim'
 
 " Snippet
 "Plug 'SirVer/ultisnips'

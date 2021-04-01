@@ -11,6 +11,6 @@ au Filetype pascal set ts=2 sw=2 nosmarttab
 au Filetype php set ts=4
 au FileType json setlocal equalprg=python\ -m\ json.tool
 au FileType json syntax match Comment +\/\/.\+$+
-au FileType calendar,startify :IndentLinesDisable
+au FileType calendar,startify,help :IndentLinesDisable
 "au BufRead *.log :command W set ro!<cr>:w<cr>
 

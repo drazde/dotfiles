@@ -22,6 +22,7 @@ vim.o.hlsearch = true                       -- Highlight search results
 vim.o.smartcase=true                        -- Intelligent search
 vim.o.ignorecase=true                       -- Intelligent search
 vim.o.incsearch=true                        -- Show search results as you type
+vim.cmd('set nowrapscan')                   -- Search don't restart to begin
 
 vim.o.autoread=true                         -- Auto reload
 vim.o.autoindent=true                       -- Autoindent on newline
@@ -50,19 +51,19 @@ vim.o.exrc=true                             -- Lvimrc
 vim.o.secure=true
 
 vim.o.showtabline = 2                       -- Always show tabs
-vim.o.showmode = false                      -- We don't need to see things like                                        -- INSERT -- anymore
+vim.o.showmode = false                      -- We don't need to see things like -- INSERT -- anymore
 
 vim.o.t_Co = "256"                          -- Support 256 colors
 vim.o.termguicolors = true                  -- set term giu colors most terminals support this
 
 vim.o.mouse = "a"                           -- Enable your mouse
 vim.o.conceallevel = 0                      -- So that I can see `` in markdown files
-vim.o.clipboard = "unnamedplus"             -- Copy paste between vim and everything else
+--vim.o.clipboard = "unnamedplus"             -- Copy paste between vim and everything else (overwrite clipboard)
 
 
 vim.o.splitbelow = true                     -- Horizontal splits will automatically be below
 vim.o.splitright = true                     -- Vertical splits will automatically be to the right
 
 vim.wo.signcolumn = "yes"                   -- Always show the signcolumn, otherwise it would shift the text each time
-vim.o.updatetime = 300                      -- Faster completion
-vim.o.timeoutlen = 100                      -- By default timeoutlen is 1000 ms
+-- vim.o.updatetime = 300                      -- Faster completion
+-- vim.o.timeoutlen = 100                      -- By default timeoutlen is 1000 ms

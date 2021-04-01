@@ -51,6 +51,12 @@ else
     Plug 'kien/ctrlp.vim'
 endif 
 
+" Fuzzy finder
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-media-files.nvim'
+
 " Crazy stuff
 "Plug 'mattn/vim-starwars'
 

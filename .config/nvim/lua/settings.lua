@@ -34,6 +34,8 @@ vim.o.shiftwidth=4
 vim.o.softtabstop=4
 vim.o.expandtab=true                        -- Converts tabs to spaces
 vim.wo.wrap=false                           -- Display long lines as just one line
+vim.cmd('autocmd Filetype * set nowrap')    -- Fix for file opened on split 
+
 
 vim.o.number=true                           -- Enable line numbers
 vim.o.relativenumber=true                   -- Relatie number (slow on old pc)

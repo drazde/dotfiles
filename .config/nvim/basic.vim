@@ -77,14 +77,6 @@ let g:secure_modelines_allowed_items = [
 
 
 " Mapping... ----------------------------------------------------------------{{{
-" No arrow keys --- force yourself to use the home row ----------------------{{{
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-"}}}
 
 " Use Ctrl+Ins and Shift+Ins for Copy and Paste in Windows, other command unmap!
 "set mouse=a
@@ -95,12 +87,12 @@ if has('win32')
     unmap <C-x>
 endif
 
-" Save buffer also with :W
-nmap <leader>w :w<cr>
-
-" Fast exit
-nmap <leader>we :w<cr>:qa!<cr>
-nmap <leader>e :qa!<cr>
+" " Save buffer also with :W
+" nmap <leader>w :w<cr>
+" 
+" " Fast exit
+" nmap <leader>we :w<cr>:qa!<cr>
+" nmap <leader>e :qa!<cr>
 
 " Moving lines vertically
 xnoremap K :m '<-2<cr>gv=gv
@@ -120,14 +112,6 @@ nnoremap <leader>ds :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <
 " Close buffer/buffers 
 nnoremap <Leader>q :Bdelete<cr>
 nnoremap <Leader>qa :bufdo :Bdelete<cr>
-
-" Indentation with 'Tab' and Un-Indentation with 'Shift+Tab'
-"nnoremap <Tab> >>
-"nnoremap <S-Tab> <<
-"inoremap <Tab> <C-t>
-"inoremap <S-Tab> <C-d>
-"vnoremap <Tab> >gv
-"vnoremap <S-Tab> <gv
 
 if executable('rg') || executable('fzf')
     nnoremap <leader>o :Files<cr>

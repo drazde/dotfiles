@@ -5,8 +5,13 @@ CACHE_PATH = vim.fn.stdpath('cache')
 require('settings')
 require('nv-comment')
 
+-- Mappings
+require('keymappings')
+
+
 -- Git
 require('nv-gitblame')
+require('nv-gitsigns')
 
 -- LSP
 require('lsp')

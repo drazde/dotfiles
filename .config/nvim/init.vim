@@ -89,6 +89,8 @@ Plug 'p00f/nvim-ts-rainbow'
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
 Plug 'f-person/git-blame.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 
 " Snippet
 "Plug 'SirVer/ultisnips'
@@ -121,7 +123,6 @@ exec "source " . config . "/nvim/split.vim"
 exec "source " . config . "/nvim/lightline.vim"
 exec "source " . config . "/nvim/nerd.vim"
 exec "source " . config . "/nvim/calendar.vim"
-exec "source " . config . "/nvim/ultisnips.vim"
 exec "source " . config . "/nvim/fzf.vim"
 
 if has('win32')

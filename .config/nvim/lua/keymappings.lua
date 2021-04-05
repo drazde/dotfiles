@@ -1,4 +1,4 @@
--- Escapie
+-- Easy escape
 --vim.api.nvim_set_keymap('', '', '', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jj', '<esc>j', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'kk', '<esc>k', {noremap = true, silent = true})
@@ -9,7 +9,7 @@ vim.api.nvim_set_keymap('v', '<s-tab>', '<gv', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<tab>', '>gv', {noremap = true, silent = true})
 
 
--- No arrow keys 
+-- No arrow keys
 vim.api.nvim_set_keymap('n', '<up>', '<nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<down>', '<nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<up>', '<nop>', {noremap = true, silent = true})
@@ -17,14 +17,74 @@ vim.api.nvim_set_keymap('i', '<down>', '<nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<left>', '<nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<right>', '<nop>', {noremap = true, silent = true})
 
--- Fast save buffer 
-vim.api.nvim_set_keymap('n','<leader>w',':w<cr>',{})
 
+-- Fast save buffer
+vim.api.nvim_set_keymap('n','<leader>w',':w<cr>',{})
 -- Fast exit
-vim.api.nvim_set_keymap('n','','',{})
 vim.api.nvim_set_keymap('n','<leader>we',':w<cr>:qa!<cr>',{})
+vim.api.nvim_set_keymap('n','<leader>e',':qa!<cr>',{})
 
 
 -- Left and right can switch buffers
 vim.api.nvim_set_keymap('n', '<left>', ':bp<cr>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<right>', ':bn<cr>', {noremap = true, silent = true})
+-- Close buffer/buffers
+vim.api.nvim_set_keymap('n', '<Leader>q', ':Bdelete<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>qa', ':bufdo :Bdelete<cr>', {noremap = true})
+
+
+
+-- Split movement
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {noremap = true, silent = true})
+vim.cmd([[
+  nnoremap <silent> <C-Up>    :resize -2<CR>
+  nnoremap <silent> <C-Down>  :resize +2<CR>
+  nnoremap <silent> <C-Left>  :vertical resize -2<CR>
+  nnoremap <silent> <C-Right> :vertical resize +2<CR>
+]])
+
+
+-- F3 Insert date and time
+vim.api.nvim_set_keymap('n', '<F3>', '<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>', {noremap = true})
+-- F5 Reload buffer and go at the end
+vim.api.nvim_set_keymap('n', '<F5>', ':e<cr>G', {noremap = true, silent = true})
+-- F6 Toggle highlight search result
+vim.api.nvim_set_keymap('n', '<F6>', ':set hlsearch!<cr>', {noremap = true, silent = true})
+-- F7 Toggle highlight spellchecking
+vim.api.nvim_set_keymap('n', '<F7>', ':set spell!', {noremap = true, silent = true})
+-- F8 Insert path and file name of the current file
+vim.api.nvim_set_keymap('n', '<F8>', ':put =expand(\'%:p\')<cr>', {noremap = true, silent = true})
+
+
+-- TODO move to functions
+-- " Remove ^M with return
+-- nnoremap <leader><cr><cr> <esc>:%s/\r/\r/g<cr>
+-- nmap <leader><cr> a<cr><esc>
+--
+-- " Change windows path to *nix path
+-- noremap <leader>\ :s/\\/\//g<cr>
+-- noremap <leader>/ :s/\//\\/g<cr>
+
+
+-- TODO serve?
+-- map <leader>vp :VimuxPromptCommand<cr>
+--
+
+-- Better nav for omnicomplete
+vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
+vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
+-- vim.cmd('inoremap <expr> <TAB> (\"\\<C-n>\")')
+-- vim.cmd('inoremap <expr> <S-TAB> (\"\\<C-p>\")')
+
+-- vim.api.nvim_set_keymap('i', '<C-TAB>', 'compe#complete()', {noremap = true, silent = true, expr = true})
+
+-- Replace the word under cursor
+vim.api.nvim_set_keymap('n', '<leader>*', ':%s/\\<<c-r><c-w>\\>//gc<left><left><left>', {noremap = true, silent = true})
+
+
+-- Nice comment (with boxes)
+vim.api.nvim_set_keymap('v', ',peek', '!boxes -d peek -a c -s 80x<cr>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', ',stone', '!boxes -d stone -a c -s 80x<cr>', {noremap = true, silent = true})

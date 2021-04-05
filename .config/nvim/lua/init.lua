@@ -1,3 +1,6 @@
+O = {
+    auto_complete = true
+}
 DATA_PATH = vim.fn.stdpath('data')
 CACHE_PATH = vim.fn.stdpath('cache')
 
@@ -7,6 +10,7 @@ require('nv-comment')
 
 -- Mappings
 require('keymappings')
+require('nv-barbar')
 
 
 -- Git
@@ -21,3 +25,7 @@ require('lsp.lua-ls')
 
 -- TreeSitter
 require('nv-treesitter')
+
+
+require('nv-compe')
+

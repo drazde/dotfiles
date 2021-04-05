@@ -63,16 +63,19 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 " VIM enhancements
 Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
-"Plug 'preservim/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
 Plug 'terrortylor/nvim-comment'
 
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 
 " Intellisense engine
 "Plug 'w0rp/ale', { 'on':  'ALEToggle' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
@@ -92,15 +95,17 @@ Plug 'f-person/git-blame.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 
-" Snippet
-"Plug 'SirVer/ultisnips'
+" Autocomplete
+Plug 'hrsh7th/nvim-compe'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'rafamadriz/friendly-snippets'
 
 " File detections (syntax, highlighting...)
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
-" Markdown
+"Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
+" Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 if executable('tmux') 
@@ -117,7 +122,6 @@ exec "source " . config . "/nvim/wildmenu.vim"
 exec "source " . config . "/nvim/theme.vim"
 exec "source " . config . "/nvim/folding.vim"
 exec "source " . config . "/nvim/diff.vim"
-exec "source " . config . "/nvim/split.vim"
 
 " Plugins option 
 exec "source " . config . "/nvim/lightline.vim"

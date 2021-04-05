@@ -95,23 +95,23 @@ endif
 " nmap <leader>e :qa!<cr>
 
 " Moving lines vertically
-xnoremap K :m '<-2<cr>gv=gv
-xnoremap J :m '>+1<cr>gv=gv
+" xnoremap K :m '<-2<cr>gv=gv
+" xnoremap J :m '>+1<cr>gv=gv
 
 " Left and right can switch buffers
-nnoremap <left> :bp<cr>
-nnoremap <right> :bn<cr>
+" nnoremap <left> :bp<cr>
+" nnoremap <right> :bn<cr>
 
-inoremap jj <esc>j
-inoremap kk <esc>k
+" inoremap jj <esc>j
+" inoremap kk <esc>k
 
 " Show and Clean trailing whitespace
 nnoremap <leader>ss /\S\zs\s\+$<cr>
 nnoremap <leader>ds :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <cr>
 
 " Close buffer/buffers 
-nnoremap <Leader>q :Bdelete<cr>
-nnoremap <Leader>qa :bufdo :Bdelete<cr>
+" nnoremap <Leader>q :Bdelete<cr>
+" nnoremap <Leader>qa :bufdo :Bdelete<cr>
 
 if executable('rg') || executable('fzf')
     nnoremap <leader>o :Files<cr>
@@ -123,51 +123,51 @@ else
     nnoremap <F2> :CtrlP ~/doc/<cr>
 endif
 
-" Insert date and time 
-imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>
-
-" Reload buffer and go at the end
-nnoremap <F5> :e<cr>G
-
-" Toggle highlight search result
-nnoremap <F6> :set hlsearch!<cr>
-
-" Toggle highlight spellchecking
-nnoremap <F7> :set spell!<cr>
-
-" Insert path and file name of the current file 
-nnoremap <F8> :put =expand('%:p')<cr>
+" " Insert date and time 
+" imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>
+" 
+" " Reload buffer and go at the end
+" nnoremap <F5> :e<cr>G
+" 
+" " Toggle highlight search result
+" nnoremap <F6> :set hlsearch!<cr>
+" 
+" " Toggle highlight spellchecking
+" nnoremap <F7> :set spell!<cr>
+" 
+" " Insert path and file name of the current file 
+" nnoremap <F8> :put =expand('%:p')<cr>
 
 " Grep search word under the cursor
 " https://thoughtbot.com/blog/faster-grepping-in-vim#search-for-the-word-under-the-cursor
 nnoremap <leader>K :grep! "\b<C-R><C-W>\b"<cr>:cw<cr>
 
-" Remove ^M with return
-nnoremap <leader><cr><cr> <esc>:%s/\r/\r/g<cr>
-nmap <leader><cr> a<cr><esc>
+" " Remove ^M with return
+" nnoremap <leader><cr><cr> <esc>:%s/\r/\r/g<cr>
+" nmap <leader><cr> a<cr><esc>
+" 
+" " Change windows path to *nix path
+" noremap <leader>\ :s/\\/\//g<cr>
+" noremap <leader>/ :s/\//\\/g<cr>
 
-" Change windows path to *nix path
-noremap <leader>\ :s/\\/\//g<cr>
-noremap <leader>/ :s/\//\\/g<cr>
-
-map <leader>vp :VimuxPromptCommand<cr>
+" map <leader>vp :VimuxPromptCommand<cr>
 
 " Replace the word under cursor
-nnoremap <leader>* :%s/\<<c-r><c-w>\>//gc<left><left><left>
+" nnoremap <leader>* :%s/\<<c-r><c-w>\>//gc<left><left><left>
 
 
 " Visual and Select mapping -------------------------------------------------{{{
 " Uppercase/Lowercase selected text with Ctrl+Up or Ctrl+Down
-vmap <C-up> gU
-vmap <C-down> gu
+" vmap <C-up> gU
+" vmap <C-down> gu
 
 " Nice comment (with boxes)
-vmap ,mc !boxes -d c-cmt<cr>
-nmap ,mc !!boxes -d c-cmt<cr>
-vmap ,xc !boxes -d c-cmt -r<cr>
-nmap ,xc !!boxes -d c-cmt -r<cr>
-vmap ,peek !boxes -d peek -a c -s 80x<cr>
-vmap ,stone !boxes -d stone -a c -s 80x<cr>
+" vmap ,mc !boxes -d c-cmt<cr>
+" nmap ,mc !!boxes -d c-cmt<cr>
+" vmap ,xc !boxes -d c-cmt -r<cr>
+" nmap ,xc !!boxes -d c-cmt -r<cr>
+" vmap ,peek !boxes -d peek -a c -s 80x<cr>
+" vmap ,stone !boxes -d stone -a c -s 80x<cr>
 "}}}
 
 "}}}

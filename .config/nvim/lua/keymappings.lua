@@ -1,3 +1,7 @@
+-- FIX it
+-- vim.api.nvim_set_keymap('n', '<space>', '<nop>', {noremap = true, silent = true})
+-- vim.g.mapleader = ' '
+
 -- Easy escape
 --vim.api.nvim_set_keymap('', '', '', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jj', '<esc>j', {noremap = true, silent = true})
@@ -16,6 +20,9 @@ vim.api.nvim_set_keymap('i', '<up>', '<nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<down>', '<nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<left>', '<nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<right>', '<nop>', {noremap = true, silent = true})
+
+-- Explorer
+vim.api.nvim_set_keymap('n', '<Leader>t', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 
 -- Fast save buffer
@@ -74,12 +81,12 @@ vim.api.nvim_set_keymap('n', '<F8>', ':put =expand(\'%:p\')<cr>', {noremap = tru
 --
 
 -- Better nav for omnicomplete
-vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
-vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
+-- vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
+-- vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
 -- vim.cmd('inoremap <expr> <TAB> (\"\\<C-n>\")')
 -- vim.cmd('inoremap <expr> <S-TAB> (\"\\<C-p>\")')
 
--- vim.api.nvim_set_keymap('i', '<C-TAB>', 'compe#complete()', {noremap = true, silent = true, expr = true})
+--vim.api.nvim_set_keymap('i', '<C-TAB>', 'compe#complete()', {noremap = true, silent = true, expr = true})
 
 -- Replace the word under cursor
 vim.api.nvim_set_keymap('n', '<leader>*', ':%s/\\<<c-r><c-w>\\>//gc<left><left><left>', {noremap = true, silent = true})

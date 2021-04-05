@@ -1,4 +1,5 @@
 O = {
+    auto_close_tree = 0,
     auto_complete = true
 }
 DATA_PATH = vim.fn.stdpath('data')
@@ -29,3 +30,4 @@ require('nv-treesitter')
 
 require('nv-compe')
 
+require('nv-nvimtree')

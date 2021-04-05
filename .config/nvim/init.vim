@@ -16,17 +16,18 @@ let mapleader = " "
 call plug#begin()
 " Color scheme
 Plug 'dracula/vim', {'as':'dracula'}                 " Dracula theme
-Plug 'altercation/vim-colors-solarized', {'as':'solarized'}
 Plug 'chriskempson/base16-vim'
 Plug 'frazrepo/vim-rainbow'                          " Colored parentesi
 
 " GUI enhancements
+Plug 'scrooloose/nerdtree'                           " Nerdtree
+Plug 'kyazdani42/nvim-tree.lua'                      " Nvim Tree
+
 Plug 'mhinz/vim-startify'
 Plug 'ciaranm/securemodelines'
 Plug 'vim-scripts/localvimrc'
-Plug 'scrooloose/nerdtree'                           " Nerdtree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'       " Highlighting Nerdtree
-Plug 'ryanoasis/vim-devicons'                        " Icons for Nerdtree
+
 Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
 "Plug 'wincent/ferret'
@@ -67,8 +68,10 @@ Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
 Plug 'terrortylor/nvim-comment'
 
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
+
+" Icons
+Plug 'ryanoasis/vim-devicons'                        " Icons for Nerdtree
 Plug 'kyazdani42/nvim-web-devicons'
 
 

@@ -14,6 +14,9 @@ let mapleader = " "
 
 " Plugin Plug-Vim -----------------------------------------------------------{{{
 call plug#begin()
+" Crazy stuff
+"Plug 'mattn/vim-starwars'
+
 " Color scheme
 Plug 'dracula/vim', {'as':'dracula'}                 " Dracula theme
 Plug 'chriskempson/base16-vim'
@@ -58,8 +61,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
 
-" Crazy stuff
-"Plug 'mattn/vim-starwars'
 
 " VIM enhancements
 Plug 'tpope/vim-surround'
@@ -118,6 +119,8 @@ endif
 call plug#end()
 "}}}
 
+lua require("init")
+
 exec "source " . config . "/nvim/basic.vim"
 exec "source " . config . "/nvim/filetype.vim"
 exec "source " . config . "/nvim/backup.vim"
@@ -135,5 +138,3 @@ exec "source " . config . "/nvim/fzf.vim"
 if has('win32')
   exec "source " . config . "/nvim/work.vim"
 endif
-
-lua require("init")

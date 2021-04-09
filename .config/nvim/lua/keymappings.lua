@@ -95,3 +95,12 @@ vim.api.nvim_set_keymap('n', '<leader>*', ':%s/\\<<c-r><c-w>\\>//gc<left><left><
 -- Nice comment (with boxes)
 vim.api.nvim_set_keymap('v', ',peek', '!boxes -d peek -a c -s 80x<cr>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', ',stone', '!boxes -d stone -a c -s 80x<cr>', {noremap = true, silent = true})
+
+-- Telescope FZF
+vim.api.nvim_set_keymap('n', 'ff', ':Telescope find_files<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'fg', ':Telescope git_files<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'fb', ':Telescope buffers<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'fh', ':Telescope oldfiles<cr>', {noremap = true})
+
+vim.api.nvim_set_keymap('n', '<leader>h', ':FZFMru<cr>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<F2>', ':FZF ~/doc/<cr>', {noremap = true, silent = true})

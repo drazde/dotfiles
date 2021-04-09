@@ -113,15 +113,11 @@ nnoremap <leader>ds :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <
 " nnoremap <Leader>q :Bdelete<cr>
 " nnoremap <Leader>qa :bufdo :Bdelete<cr>
 
-if executable('rg') || executable('fzf')
-    nnoremap <leader>o :Files<cr>
-    nnoremap <leader>h :FZFMru<cr>
-    nnoremap <silent> <F2> :FZF ~/doc/<cr>
-    silent! nmap <C-P> :GFiles<cr>
-else
-    nnoremap <leader>h :CtrlPMRUFiles<cr>
-    nnoremap <F2> :CtrlP ~/doc/<cr>
-endif
+" if executable('rg') || executable('fzf')
+" nnoremap <leader>o :Files<cr>
+" nnoremap <leader>h :FZFMru<cr>
+" nnoremap <silent> <F2> :FZF ~/doc/<cr>
+" silent! nmap <C-P> :GFiles<cr>
 
 " " Insert date and time 
 " imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>

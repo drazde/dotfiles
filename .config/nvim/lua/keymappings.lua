@@ -25,18 +25,20 @@ vim.api.nvim_set_keymap('i', '<right>', '<nop>', {noremap = true, silent = true}
 vim.api.nvim_set_keymap('n', '<Leader>t', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 
--- Fast save buffer
-vim.api.nvim_set_keymap('n','<leader>w',':w<cr>',{})
 -- Fast exit
 vim.api.nvim_set_keymap('n','<leader>we',':w<cr>:qa!<cr>',{})
 vim.api.nvim_set_keymap('n','<leader>e',':qa!<cr>',{})
 
 
+-- Fast save buffer
+vim.api.nvim_set_keymap('n','<leader>w',':w<cr>',{})
+
 -- Left and right can switch buffers
 vim.api.nvim_set_keymap('n', '<left>', ':bp<cr>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<right>', ':bn<cr>', {noremap = true, silent = true})
 -- Close buffer/buffers
-vim.api.nvim_set_keymap('n', '<Leader>q', ':Bdelete<cr>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>q', ':BufferClose<cr>', {noremap = true})
+-- vim.api.nvim_set_keymap('n', '<Leader>q', ':Bdelete<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>qa', ':bufdo :Bdelete<cr>', {noremap = true})
 
 

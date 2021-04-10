@@ -37,7 +37,6 @@ Plug 'Yggdroot/indentLine'
 "Plug 'wincent/command-t'
 "Plug 'itchyny/calendar.vim'
 Plug 'mattn/calendar-vim'
-Plug 'moll/vim-bbye'
 Plug 'andymass/vim-matchup'
 
 if executable('rg') || executable('fzf')
@@ -69,7 +68,8 @@ Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
 Plug 'terrortylor/nvim-comment'
 
-Plug 'romgrk/barbar.nvim'
+Plug 'romgrk/barbar.nvim'                            " Buffer manager *new
+Plug 'moll/vim-bbye'                                 " Buffer manager (:Bdelete)
 
 " Icons
 Plug 'ryanoasis/vim-devicons'                        " Icons for Nerdtree

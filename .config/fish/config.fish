@@ -12,7 +12,7 @@
 # show inf on my so
 #neofetch
 
-alias vi='~/tmp/nvim/bin/nvim'
+ alias vi='$HOME/local/nvim/bin/nvim'
 alias ll='ls -la'
 
 # doftiles

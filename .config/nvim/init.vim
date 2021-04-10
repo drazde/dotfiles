@@ -21,6 +21,7 @@ call plug#begin()
 "Plug 'itchyny/calendar.vim'
 "Plug 'vim-scripts/localvimrc'
 "Plug 'airblade/vim-gitgutter'
+"Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
 
 " Color scheme
 Plug 'dracula/vim', {'as':'dracula'}             " Dracula theme
@@ -58,31 +59,31 @@ else
 endif 
 
 " VIM enhancements
-Plug 'tpope/vim-surround'                            " Change quote,and more...
-Plug 'machakann/vim-highlightedyank'
-Plug 'godlygeek/tabular'
-Plug 'junegunn/goyo.vim'                             " Distraction free mode
-Plug 'terrortylor/nvim-comment'                      " Easy comment code
+Plug 'tpope/vim-surround'                           " Change quote,and more...
+Plug 'machakann/vim-highlightedyank'                " Highlighting yank text
+Plug 'godlygeek/tabular'                            " Tabular align text
+Plug 'junegunn/goyo.vim'                            " Distraction free mode
 
-Plug 'romgrk/barbar.nvim'                            " Buffer manager *new
-Plug 'moll/vim-bbye'                                 " Buffer manager (:Bdelete)
+Plug 'romgrk/barbar.nvim'                           " Buffer manager *new
+Plug 'moll/vim-bbye'                                " Buffer manager (:Bdelete)
 
 " Icons
-Plug 'ryanoasis/vim-devicons'                        " Icons for Nerdtree
-Plug 'kyazdani42/nvim-web-devicons'                  " Icons for nvim-tree
+Plug 'ryanoasis/vim-devicons'                       " Icons for Nerdtree
+Plug 'kyazdani42/nvim-web-devicons'                 " Icons for nvim-tree
 
 " LSP
-Plug 'neovim/nvim-lspconfig'                         " Language Server Protocol
-Plug 'kabouzeid/nvim-lspinstall'                     " LSP Server easy Install
-Plug 'nvim-lua/completion-nvim'                      " Completion with LSP
-Plug 'nvim-lua/diagnostic-nvim'                      " Diagnostic for LSP
+Plug 'neovim/nvim-lspconfig'                        " Language Server Protocol
+Plug 'kabouzeid/nvim-lspinstall'                    " LSP Server easy Install
+Plug 'nvim-lua/completion-nvim'                     " Completion with LSP
+Plug 'nvim-lua/diagnostic-nvim'                     " Diagnostic for LSP
 
 " Treesitter (syntax, highlighting,...)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Code Parser
-Plug 'nvim-treesitter/playground'                           " Treesitter info 
-Plug 'p00f/nvim-ts-rainbow'                                 " Nice parenthesis
-Plug 'sheerun/vim-polyglot'                                 " Language packs
-Plug 'vim-pandoc/vim-pandoc-syntax'                         " Pandoc extensions
+Plug 'nvim-treesitter/playground'                   " Treesitter info 
+Plug 'p00f/nvim-ts-rainbow'                         " Nice parenthesis
+Plug 'sheerun/vim-polyglot'                         " Language packs
+Plug 'vim-pandoc/vim-pandoc-syntax'                 " Pandoc extensions
+Plug 'terrortylor/nvim-comment'                     " Easy comment code
 
 " Autocomplete
 Plug 'hrsh7th/nvim-compe'                           " Completion for LSP
@@ -95,14 +96,11 @@ Plug 'jreybert/vimagit'                             " Git manage workflow
 Plug 'f-person/git-blame.nvim'                      " Blame info at current line
 Plug 'lewis6991/gitsigns.nvim'                      " Show modification 
 
-"Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
-" Tmux integration
 if executable('tmux') 
-  " NB: error if tmux isn't install
-  Plug 'benmills/vimux'
+  Plug 'benmills/vimux'                             " Tmux integration
 endif
 
 call plug#end()

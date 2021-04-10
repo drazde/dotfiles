@@ -80,12 +80,12 @@ let g:secure_modelines_allowed_items = [
 
 " Use Ctrl+Ins and Shift+Ins for Copy and Paste in Windows, other command unmap!
 "set mouse=a
-source $VIMRUNTIME/mswin.vim
-unmap <C-v>
-unmap <C-a>
-if has('win32')
-    unmap <C-x>
-endif
+" source $VIMRUNTIME/mswin.vim
+" unmap <C-v>
+" unmap <C-a>
+" if has('win32')
+"     unmap <C-x>
+" endif
 
 " " Save buffer also with :W
 " nmap <leader>w :w<cr>

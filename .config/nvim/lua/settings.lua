@@ -48,6 +48,13 @@ vim.o.sidescrolloff=10                      -- Leave 10 char when horizontal scr
 vim.o.synmaxcol=500
 
 vim.o.mousefocus=true                       -- gvim, move focus between windows
+vim.cmd('source $VIMRUNTIME/mswin.vim')     -- Windows Copy and Paste (also Ctrl+Ins,Shift+Ins)
+vim.cmd('unmap <C-v>')
+vim.cmd('unmap <C-a>')
+if vim.fn.has('win32') == 1 then
+    vim.cmd('unmap <C-x>')
+end
+
 vim.o.autochdir=true                        -- chdir to dir of current buffer selected
 
 vim.o.exrc=true                             -- Lvimrc

@@ -14,31 +14,35 @@ let mapleader = " "
 
 " Plugin Plug-Vim -----------------------------------------------------------{{{
 call plug#begin()
-" Crazy stuff
+" Crazy stuff and old plugin
 "Plug 'mattn/vim-starwars'
-
-" Color scheme
-Plug 'dracula/vim', {'as':'dracula'}                 " Dracula theme
-Plug 'chriskempson/base16-vim'
-Plug 'frazrepo/vim-rainbow'                          " Colored parentesi
-
-" GUI enhancements
-Plug 'scrooloose/nerdtree'                           " Nerdtree
-Plug 'kyazdani42/nvim-tree.lua'                      " Nvim Tree
-
-Plug 'mhinz/vim-startify'
-Plug 'ciaranm/securemodelines'
-Plug 'vim-scripts/localvimrc'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'       " Highlighting Nerdtree
-
-Plug 'itchyny/lightline.vim'
-Plug 'Yggdroot/indentLine'
 "Plug 'wincent/ferret'
 "Plug 'wincent/command-t'
 "Plug 'itchyny/calendar.vim'
-Plug 'mattn/calendar-vim'
-Plug 'andymass/vim-matchup'
+"Plug 'vim-scripts/localvimrc'
+"Plug 'airblade/vim-gitgutter'
 
+" Color scheme
+Plug 'dracula/vim', {'as':'dracula'}             " Dracula theme
+Plug 'frazrepo/vim-rainbow'                      " Colored parentesi
+
+" GUI enhancements
+Plug 'scrooloose/nerdtree'                       " Nerdtree
+Plug 'kyazdani42/nvim-tree.lua'                  " Nvim Tree
+
+Plug 'mhinz/vim-startify'                        " Start menu
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'   " Highlighting Nerdtree
+
+Plug 'itchyny/lightline.vim'                     " Modelines
+Plug 'Yggdroot/indentLine'                       " Indentation visualization
+Plug 'mattn/calendar-vim'                        " Calendar
+Plug 'andymass/vim-matchup'                      " 
+
+" Fuzzy finder
+Plug 'nvim-lua/popup.nvim'                       " Library for Telescope
+Plug 'nvim-lua/plenary.nvim'                     " All Lua fanction in vim
+Plug 'nvim-telescope/telescope.nvim'             " Fuzzy finder (files and more)
+Plug 'nvim-telescope/telescope-media-files.nvim' " Telescope meedia preview
 if executable('rg') || executable('fzf')
     if has('unix')
         Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -48,71 +52,56 @@ if executable('rg') || executable('fzf')
             Plug 'junegunn/fzf', { 'dir': '/c/.fzf', 'do': './install --all' }
         endif
     endif
-    Plug 'junegunn/fzf.vim'
     Plug 'pbogut/fzf-mru.vim'
 else
     Plug 'kien/ctrlp.vim'
 endif 
 
-" Fuzzy finder
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-media-files.nvim'
-
-
 " VIM enhancements
-Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'                            " Change quote,and more...
 Plug 'machakann/vim-highlightedyank'
 Plug 'godlygeek/tabular'
-Plug 'junegunn/goyo.vim'
-Plug 'terrortylor/nvim-comment'
+Plug 'junegunn/goyo.vim'                             " Distraction free mode
+Plug 'terrortylor/nvim-comment'                      " Easy comment code
 
 Plug 'romgrk/barbar.nvim'                            " Buffer manager *new
 Plug 'moll/vim-bbye'                                 " Buffer manager (:Bdelete)
 
 " Icons
 Plug 'ryanoasis/vim-devicons'                        " Icons for Nerdtree
-Plug 'kyazdani42/nvim-web-devicons'
-
-
-" Intellisense engine
-"Plug 'w0rp/ale', { 'on':  'ALEToggle' }
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'kyazdani42/nvim-web-devicons'                  " Icons for nvim-tree
 
 " LSP
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
-Plug 'kabouzeid/nvim-lspinstall'
+Plug 'neovim/nvim-lspconfig'                         " Language Server Protocol
+Plug 'kabouzeid/nvim-lspinstall'                     " LSP Server easy Install
+Plug 'nvim-lua/completion-nvim'                      " Completion with LSP
+Plug 'nvim-lua/diagnostic-nvim'                      " Diagnostic for LSP
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
-Plug 'p00f/nvim-ts-rainbow'
-
-" Git
-"Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'jreybert/vimagit'
-Plug 'f-person/git-blame.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'lewis6991/gitsigns.nvim'
+" Treesitter (syntax, highlighting,...)
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Code Parser
+Plug 'nvim-treesitter/playground'                           " Treesitter info 
+Plug 'p00f/nvim-ts-rainbow'                                 " Nice parenthesis
+Plug 'sheerun/vim-polyglot'                                 " Language packs
+Plug 'vim-pandoc/vim-pandoc-syntax'                         " Pandoc extensions
 
 " Autocomplete
-Plug 'hrsh7th/nvim-compe'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'rafamadriz/friendly-snippets'
+Plug 'hrsh7th/nvim-compe'                           " Completion for LSP
+Plug 'hrsh7th/vim-vsnip'                            " Snippet integration
+Plug 'rafamadriz/friendly-snippets'                 " Snippet template
 
-" File detections (syntax, highlighting...)
-Plug 'sheerun/vim-polyglot'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+" Git
+Plug 'tpope/vim-fugitive'                           " Git command inside vim 
+Plug 'jreybert/vimagit'                             " Git manage workflow
+Plug 'f-person/git-blame.nvim'                      " Blame info at current line
+Plug 'lewis6991/gitsigns.nvim'                      " Show modification 
 
 "Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
+" Tmux integration
 if executable('tmux') 
+  " NB: error if tmux isn't install
   Plug 'benmills/vimux'
 endif
 

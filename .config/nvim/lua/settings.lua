@@ -16,6 +16,7 @@ vim.cmd('set timeoutlen=500 ttimeoutlen=0') -- Remove timeout when hitting escap
 vim.cmd('set vb t_vb=')                     -- No more beeps
 vim.cmd('set tags=.git/tags')               -- Hide ctags in .git
 vim.cmd('set diffopt+=vertical')            -- Gdiff compare file in vertical
+vim.cmd('let g:indentLine_char = "|"')      -- IndentLine char
 
 
 vim.o.hlsearch = true                       -- Highlight search results
@@ -34,7 +35,7 @@ vim.o.shiftwidth=4
 vim.o.softtabstop=4
 vim.o.expandtab=true                        -- Converts tabs to spaces
 vim.wo.wrap=false                           -- Display long lines as just one line
-vim.cmd('autocmd Filetype * set nowrap')    -- Fix for file opened on split 
+vim.cmd('autocmd Filetype * set nowrap')    -- Fix for file opened on split
 
 
 vim.o.number=true                           -- Enable line numbers

@@ -66,6 +66,9 @@ vim.api.nvim_set_keymap('n', '<F6>', ':set hlsearch!<cr>', {noremap = true, sile
 vim.api.nvim_set_keymap('n', '<F7>', ':set spell!', {noremap = true, silent = true})
 -- F8 Insert path and file name of the current file
 vim.api.nvim_set_keymap('n', '<F8>', ':put =expand(\'%:p\')<cr>', {noremap = true, silent = true})
+-- F12 Edit neovim config
+vim.api.nvim_set_keymap('n', '<F12>', ':e $MYVIMRC<cr>', {noremap = true, silent = true})
+
 
 
 -- TODO move to functions

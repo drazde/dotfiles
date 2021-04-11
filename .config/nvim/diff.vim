@@ -14,5 +14,3 @@ if &diff
     map < [c
 endif
 
-" Diff changed file with saved 
-command Diff execute 'w !diff % -'

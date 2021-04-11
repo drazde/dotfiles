@@ -19,4 +19,3 @@ endif
 
 " Resize splits when resized
 au VimResized * exe "normal! \<c-w>="
-"au GUIEnter * winpos 550 550

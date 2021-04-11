@@ -1,5 +1,4 @@
 " Lightline options 
-" let g:lightline = { 'colorscheme': 'wombat' }
 let g:lightline = {
       \ 'colorscheme': 'dracula',
       \ 'active': {
@@ -11,6 +10,7 @@ let g:lightline = {
 	    \   'gitbranch': 'FugitiveHead'
       \ },
 \ }
+
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction

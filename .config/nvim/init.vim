@@ -40,10 +40,12 @@ Plug 'mattn/calendar-vim'                        " Calendar
 Plug 'andymass/vim-matchup'                      " 
 
 " Fuzzy finder
+Plug 'jremmen/vim-ripgrep'                       " Rg command inside vim
 Plug 'nvim-lua/popup.nvim'                       " Library for Telescope
 Plug 'nvim-lua/plenary.nvim'                     " All Lua fanction in vim
 Plug 'nvim-telescope/telescope.nvim'             " Fuzzy finder (files and more)
 Plug 'nvim-telescope/telescope-media-files.nvim' " Telescope meedia preview
+Plug 'nvim-telescope/telescope-project.nvim' " Telescope meedia preview
 if executable('rg') || executable('fzf')
     if has('unix')
         Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -92,7 +94,7 @@ Plug 'rafamadriz/friendly-snippets'                 " Snippet template
 
 " Git
 Plug 'tpope/vim-fugitive'                           " Git command inside vim 
-Plug 'jreybert/vimagit'                             " Git manage workflow
+Plug 'TimUntersberger/neogit'                       " Git manage workflow (Magit)
 Plug 'f-person/git-blame.nvim'                      " Blame info at current line
 Plug 'lewis6991/gitsigns.nvim'                      " Show modification 
 

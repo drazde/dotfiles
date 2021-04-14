@@ -1,5 +1,5 @@
 [core]
-#    autocrlf = true
+    autocrlf = true
 
 [user]
     name = Marco Andreolli
@@ -29,6 +29,8 @@
     sa = "!f() { git stash apply stash^{/$*}; }; f"
     sl = stash list
     fp = format-patch
+    rm = rm --cached
+    pp = "!func(){ git pull && git push;}; func"
 
 [diff]
     tool = vimdiff

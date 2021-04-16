@@ -22,6 +22,7 @@ call plug#begin()
 "Plug 'vim-scripts/localvimrc'
 "Plug 'airblade/vim-gitgutter'
 "Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
+"Plug 'TimUntersberger/neogit'                       " Git manage workflow (Magit)
 
 " Color scheme
 Plug 'dracula/vim', {'as':'dracula'}             " Dracula theme
@@ -51,7 +52,7 @@ if executable('rg') || executable('fzf')
         Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     else 
         " Fix problem with user with space, example JHON DO
-        if has('win32')
+        if has('win32')k
             Plug 'junegunn/fzf', { 'dir': '/c/.fzf', 'do': './install --all' }
         endif
     endif
@@ -91,10 +92,10 @@ Plug 'terrortylor/nvim-comment'                     " Easy comment code
 Plug 'hrsh7th/nvim-compe'                           " Completion for LSP
 Plug 'hrsh7th/vim-vsnip'                            " Snippet integration
 Plug 'rafamadriz/friendly-snippets'                 " Snippet template
+Plug 'windwp/nvim-autopairs'                        " Parentesis/tag
 
 " Git
 Plug 'tpope/vim-fugitive'                           " Git command inside vim 
-Plug 'TimUntersberger/neogit'                       " Git manage workflow (Magit)
 Plug 'f-person/git-blame.nvim'                      " Blame info at current line
 Plug 'lewis6991/gitsigns.nvim'                      " Show modification 
 

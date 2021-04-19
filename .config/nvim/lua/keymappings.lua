@@ -108,7 +108,8 @@ vim.api.nvim_set_keymap('n', 'fg', ':Telescope git_files<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', 'fb', ':Telescope buffers<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', 'fh', ':Telescope oldfiles<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>h', ':FZFMru<cr>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<F2>', ':FZF ~/doc/<cr>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<F2>', ':FZF ~/doc/<cr>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<F2>', ':lua require\'nv-telescope\'.search_doc{}<cr>', {noremap = true, silent = true})
 
 
 -- Git (fugitive)

@@ -1,6 +1,3 @@
-[core]
-    autocrlf = true
-
 [user]
     name = Marco Andreolli
     email = drazde@gmail.com
@@ -31,6 +28,9 @@
     fp = format-patch
     rm = rm --cached
     pp = "!func(){ git pull && git push;}; func"
+
+[core]
+	editor = vim
 
 [diff]
     tool = vimdiff

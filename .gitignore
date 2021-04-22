@@ -1,1 +1,3 @@
 .config/nvim/work.vim
+.config/nvim/autoload
+.config/nvim/plugged

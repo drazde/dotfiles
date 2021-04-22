@@ -1,12 +1,14 @@
 local actions = require('telescope.actions')
+local pickers = require('telescope.pickers')
+local finders = require('telescope.finders')
+local path = require('plenary.path')
+
 -- Global remapping
-------------------------------
--- '--color=never',
 require('telescope').load_extension('media_files')
 require('telescope').setup {
     defaults = {
         vimgrep_arguments = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
-        prompt_position = "top",
+        -- prompt_position = "top",
         prompt_prefix = " ",
         selection_caret = " ",
         entry_prefix = "  ",
@@ -73,11 +75,34 @@ require('telescope').setup {
 }
 
 local M = {}
+-- M.search_doc = function()
+--     require("telescope.builtin").find_files({
+--         prompt_title = "< doc >",
+--         cwd = "$HOME/doc/",
+--     })
+-- end
+
 M.search_doc = function()
-    require("telescope.builtin").find_files({
+    local opts = {
         prompt_title = "< doc >",
-        cwd = "$HOME/doc/",
-    })
+        search_dirs = { 
+            path:new(vim.env.HOME, 'doc/text'):absolute(),
+            path:new(vim.env.HOME, 'doc/lavoro'):absolute(),
+        },
+    }
+    require('telescope.builtin').find_files(opts)
+end
+
+-- TODO: fix
+M.grep_doc = function()
+    local opts = {
+        prompt_title = "< live grep doc >",
+        search_dirs = { 
+            path:new(vim.env.HOME, 'doc/text'):absolute(),
+            -- path:new(vim.env.HOME, 'doc/lavoro'):absolute(),
+        },
+    }
+    require('telescope.builtin').live_grep(opts)
 end
 
 return M

@@ -12,14 +12,21 @@
 # show inf on my so
 #neofetch
 
- alias vi='$HOME/local/nvim/bin/nvim'
+# short command
 alias ll='ls -la'
+alias photo_cat='exiftool \'-Directory<DateTimeOriginal\' -d Foto-%Y/%m-%d -r .'
 
-# doftiles
+
+# nightly programs
+alias vi='$HOME/local/nvim/bin/nvim'
+
+
+# git doftiles
 function config 
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
 end;
 
+# git doc
 function doc 
     /usr/bin/git --git-dir=$HOME/doc/.git/ --work-tree=$HOME/doc $argv
 end;

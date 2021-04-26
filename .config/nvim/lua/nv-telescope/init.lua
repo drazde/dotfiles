@@ -85,7 +85,7 @@ local M = {}
 M.search_doc = function()
     local opts = {
         prompt_title = "< doc >",
-        search_dirs = { 
+        search_dirs = {
             path:new(vim.env.HOME, 'doc/text'):absolute(),
             path:new(vim.env.HOME, 'doc/lavoro'):absolute(),
         },
@@ -97,7 +97,7 @@ end
 M.grep_doc = function()
     local opts = {
         prompt_title = "< live grep doc >",
-        search_dirs = { 
+        search_dirs = {
             path:new(vim.env.HOME, 'doc/text'):absolute(),
             -- path:new(vim.env.HOME, 'doc/lavoro'):absolute(),
         },

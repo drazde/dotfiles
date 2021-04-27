@@ -1,5 +1,5 @@
 --  File type custom config end syntax
-vim.api.cmd([[
+vim.cmd([[
 au BufRead ~/.config/i3/config set filetype=i3config
 au BufRead ~/.config/i3status/config set filetype=i3config
 au FileType markdown set syntax=pandoc wrap     " Syntax markdown for vimwiki

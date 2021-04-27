@@ -112,10 +112,7 @@ call plug#end()
 lua require("init")
 
 exec "source " . config . "/nvim/basic.vim"
-exec "source " . config . "/nvim/filetype.vim"
-exec "source " . config . "/nvim/wildmenu.vim"
 exec "source " . config . "/nvim/theme.vim"
-exec "source " . config . "/nvim/folding.vim"
 exec "source " . config . "/nvim/diff.vim"
 
 " Plugins option 

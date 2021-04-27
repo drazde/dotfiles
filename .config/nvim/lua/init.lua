@@ -7,9 +7,14 @@ CACHE_PATH = vim.fn.stdpath('cache')
 
 -- Basic settings
 require('settings')
+require('backup')
+require('filetype')
+require('folding')
+
+
 require('nv-comment')
 require('nv-autopairs')
-require('backup')
+
 
 -- Mappings
 require('keymappings')

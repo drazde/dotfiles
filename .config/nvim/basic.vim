@@ -38,15 +38,15 @@
 "endif
 "set scrolloff=5                       " Leave 5 lines of buffer when scrolling
 "set sidescrolloff=10                  " Leave 10 char when horizontal scrolling
-if has('gui')
-    set guifont=Fira_Mono_for_Powerline:h10
-    set guioptions-=T                 " Remove toolbar
-    set guioptions-=L
-    set guioptions-=R
-    set guioptions-=b                 " Remove horizontal scrollbar
-    set guioptions-=l
-    set guioptions-=r                 " Remove vertical scrollbar
-endif
+"if has('gui')
+"    set guifont=Fira_Mono_for_Powerline:h10
+"    set guioptions-=T                 " Remove toolbar
+"    set guioptions-=L
+"    set guioptions-=R
+"    set guioptions-=b                 " Remove horizontal scrollbar
+"    set guioptions-=l
+"    set guioptions-=r                 " Remove vertical scrollbar
+"endif
 "set synmaxcol=500                     " Max char for line
 "set tags=.git/tags                    " Hide ctags in .git
 "set diffopt+=vertical                 " Gdiff compare file in vertical

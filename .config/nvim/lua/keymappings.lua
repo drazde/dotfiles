@@ -24,7 +24,7 @@ vim.api.nvim_set_keymap('i', '<right>', '<nop>', {noremap = true, silent = true}
 
 -- Explorer
 vim.api.nvim_set_keymap('n', '<Leader>t', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
-
+vim.api.nvim_set_keymap('n', '<leader>n :NERDTreeToggle %:p:h<cr>',{noremap = true, silent = true})
 
 -- Fast exit
 vim.api.nvim_set_keymap('n','<leader>we',':w<cr>:qa!<cr>',{})

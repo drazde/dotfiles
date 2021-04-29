@@ -1,20 +1,23 @@
 # GIMP gimprc
 # 
 # This is your personal gimprc file.  Any variable defined in this file takes
-# precedence over the value defined in the system-wide gimprc:
-# /etc/gimp/2.0/gimprc
+# precedence over the value defined in the system-wide gimprc: C:\Program
+# Files\GIMP 2\etc\gimp\2.0\gimprc
 # Most values can be set within GIMP by changing some options in the
 # Preferences dialog.
 
-(import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/gimp-org-file-rawtherapee/gimp-org-file-rawtherapee")
-(check-update-timestamp 1602150096)
-(last-release-timestamp 1601769600)
-(monitor-xresolution 118)
-(monitor-yresolution 118)
+(import-raw-plug-in "${gimp_plug_in_dir}\\plug-ins\\file-raw-placeholder\\file-raw-placeholder.exe")
+(check-update-timestamp 1619683041)
+(monitor-xresolution 92)
+(monitor-yresolution 92)
+(icon-theme "Symbolic-High-Contrast")
 (icon-size medium)
 (user-manual-online yes)
-(layer-new-name "Sharpening Mask")
-(channel-new-name "Sharpening Mask")
+(layer-new-name "Tracciato")
+(selection-feather-radius 10)
+(selection-feather-edge-lock no)
+(selection-border-radius 2)
+(selection-border-style feathered)
 (fill-options
     (style solid)
     (antialias yes)
@@ -26,7 +29,7 @@
     (feather no)
     (feather-radius 10)
     (method line)
-    (width 6)
+    (width 8)
     (unit pixels)
     (cap-style butt)
     (join-style miter)

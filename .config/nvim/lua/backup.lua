@@ -31,19 +31,19 @@ local directory=vim.env.HOME .. '/.cache/nvim/tmp/swap/';   -- Swap file
 --directory = convert_path(directory);
 
 if vim.fn.has('unix') == 1 then
-    
+
     vim.cmd('set undodir=' .. undodir);     -- undo files
     vim.cmd('set backupdir=' .. backupdir); -- backups
     vim.cmd('set directory=' .. directory); -- swap files
-    
+
     if vim.fn.isdirectory(undodir) ~= 1 then
         vim.fn.mkdir(undodir,"p")
     end;
-    
+
     if vim.fn.isdirectory(backupdir) ~= 1 then
         vim.fn.mkdir(backupdir,"p")
     end
-    
+
     if vim.fn.isdirectory(directory) ~= 1 then
         vim.fn.mkdir(directory,"p")
     end

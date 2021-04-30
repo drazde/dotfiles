@@ -11,19 +11,20 @@
     (size 640 480))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 0 0)
-    (size 1920 1017)
+    (position 0 18)
+    (size 1276 761)
+    (monitor 0)
     (open-on-exit)
     (aux-info
         (left-docks-width "44")
         (right-docks-width "272")
-        (maximized "yes"))
+        (maximized "no"))
     (gimp-toolbox
         (side left))
     (gimp-dock
         (side right)
         (book
-            (current-page 1)
+            (current-page 4)
             (dockable "gimp-histogram-editor"
                 (tab-style automatic))
             (dockable "gimp-navigation-view"
@@ -51,7 +52,7 @@
                 (aux-info
                     (show-button-bar "true")
                     (edit-active "true")
-                    (current-data "Personalizzato")))
+                    (current-data "Da pp a sf (RGB)")))
             (dockable "gimp-palette-list"
                 (tab-style automatic)
                 (aux-info
@@ -61,7 +62,7 @@
                 (aux-info
                     (show-button-bar "true")
                     (edit-active "true")
-                    (current-data "Pastels")))
+                    (current-data "Cronologia colore")))
             (dockable "gimp-selection-editor"
                 (tab-style automatic)
                 (aux-info
@@ -70,10 +71,10 @@
                 (tab-style automatic)
                 (aux-info
                     (edit-active "true")
-                    (current-data "2. Hardness 025"))))
+                    (current-data "2. Hardness 100"))))
         (book
-            (position 256)
-            (current-page 3)
+            (position 317)
+            (current-page 4)
             (dockable "gimp-layer-list"
                 (tab-style automatic)
                 (preview-size 32)
@@ -96,14 +97,6 @@
                 (locked)
                 (tab-style automatic)
                 (preview-size 32)
-                (aux-info
-                    (show-button-bar "true")))
-            (dockable "gimp-image-list"
-                (tab-style automatic)
-                (aux-info
-                    (show-button-bar "true")))
-            (dockable "gimp-device-status"
-                (tab-style automatic)
                 (aux-info
                     (show-button-bar "true"))))))
 (session-info "toplevel"

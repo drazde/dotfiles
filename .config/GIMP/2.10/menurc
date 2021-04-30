@@ -1114,7 +1114,6 @@
 ; (gtk_accel_path "<Actions>/filters/filters-mean-curvature-blur" "")
 ; (gtk_accel_path "<Actions>/layers/layers-color-tag-yellow" "")
 ; (gtk_accel_path "<Actions>/context/context-brush-aspect-decrease-skip" "")
-; (gtk_accel_path "<Actions>/windows/windows-dock-0002" "")
 ; (gtk_accel_path "<Actions>/dock/dock-move-to-screen-:0.0" "")
 ; (gtk_accel_path "<Actions>/filters/filters-animation-menu" "")
 ; (gtk_accel_path "<Actions>/gradient-editor/gradient-editor-save-right-08" "")

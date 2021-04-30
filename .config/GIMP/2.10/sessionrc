@@ -119,7 +119,8 @@
     (position 0 105))
 (session-info "toplevel"
     (factory-entry "gimp-toolbox-color-dialog")
-    (position 296 406))
+    (position 294 348)
+    (monitor 0))
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
     (position 608 159)

@@ -47,13 +47,13 @@ if vim.fn.has('unix') == 1 then
     if vim.fn.isdirectory(directory) ~= 1 then
         vim.fn.mkdir(directory,"p")
     end
-else 
+else
     undodir = 'set undodir=' .. convert_path(undodir);
     vim.cmd(undodir);     -- undo files
 
-    backupdir = 'set backupdir=' .. convert_path(backupdir); 
+    backupdir = 'set backupdir=' .. convert_path(backupdir);
     vim.cmd(backupdir);     -- backup files
 
-    directory = 'set directory=' .. convert_path(directory); 
+    directory = 'set directory=' .. convert_path(directory);
     vim.cmd(directory);     -- swap files
 end;

@@ -69,7 +69,7 @@ vim.api.nvim_set_keymap('n', '<F8>', ':put =expand(\'%:p\')<cr>', {noremap = tru
 -- F12 Edit neovim config
 vim.api.nvim_set_keymap('n', '<F12>', ':e $MYVIMRC<cr>', {noremap = true, silent = true})
 -- Ctrl+F12 .config
-vim.api.nvim_set_keymap('n', '<C-F12>', ':FZF ~/.config<cr>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-F12>', ':FZF ~/.config/nvim/<cr>', {noremap = true, silent = true})
 
 
 

@@ -17,11 +17,3 @@ function! ToggleCalendar()
         let g:calendar_open = 1
     end
 endfunction
-
-
-" Vimwiki
-"let g:vimwiki_list = [{'path': '~/doc/', 'syntax': 'markdown', 'ext': '.md'}]
-"au FileType vimwiki map <leader>di :VimwikiDiaryIndex<cr>
-"au FileType vimwiki map <leader>s :VimwikiSearch /
-"nmap <Leader>d :VimwikiTabMakeDiaryNote<cr>
-"nmap <Leader>D :VimwikiMakeYesterdayDiaryNote<cr>

@@ -111,7 +111,7 @@ call plug#end()
 
 lua require("init")
 
-exec "source " . config . "/nvim/basic.vim"
+"exec "source " . config . "/nvim/basic.vim"
 exec "source " . config . "/nvim/theme.vim"
 exec "source " . config . "/nvim/diff.vim"
 
@@ -120,7 +120,3 @@ exec "source " . config . "/nvim/lightline.vim"
 exec "source " . config . "/nvim/nerd.vim"
 exec "source " . config . "/nvim/calendar.vim"
 exec "source " . config . "/nvim/fzf.vim"
-
-if has('win32')
-  exec "source " . config . "/nvim/work.vim"
-endif

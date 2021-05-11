@@ -10,10 +10,13 @@ require('settings')
 require('backup')
 require('filetype')
 require('folding')
+require('theme')
 
 
+-- Comment and completations
 require('nv-comment')
 require('nv-autopairs')
+require('nv-compe')
 
 
 -- Mappings
@@ -25,16 +28,23 @@ require('nv-barbar')
 require('nv-gitblame')
 require('nv-gitsigns')
 
+
 -- LSP
 require('lsp')
 require('lsp.python-ls')
 require('lsp.js-ts-ls')
 require('lsp.lua-ls')
 
+
 -- TreeSitter
 require('nv-treesitter')
 
 
-require('nv-compe')
-
+-- File navigations
 require('nv-nvimtree')
+
+
+-- Work only configs
+if vim.fn.has('win32') == 1 then
+    require('work')
+end

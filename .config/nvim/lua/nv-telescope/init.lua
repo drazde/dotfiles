@@ -75,12 +75,6 @@ require('telescope').setup {
 }
 
 local M = {}
--- M.search_doc = function()
---     require("telescope.builtin").find_files({
---         prompt_title = "< doc >",
---         cwd = "$HOME/doc/",
---     })
--- end
 
 M.search_doc = function()
     local opts = {

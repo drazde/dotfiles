@@ -1,9 +1,9 @@
-" Theme, background, colors, windows dimension
-set background=dark
-colorscheme dracula
+" " Theme, background, colors, windows dimension
+" set background=dark
+" colorscheme dracula
 
 " Showcase comments in italics
-highlight Comment cterm=italic gui=italic
+" highlight Comment cterm=italic gui=italic
 
 if has('gui')
     set guifont=Fira_Mono_for_Powerline:h10
@@ -27,5 +27,5 @@ if has("gui_running")
   endif
 endif
 
-" Resize splits when resized
-au VimResized * exe "normal! \<c-w>="
+" " Resize splits when resized
+ au VimResized * exe "normal! \<c-w>="

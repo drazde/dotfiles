@@ -14,4 +14,7 @@ au FileType json syntax match Comment +\/\/.\+$+
 au FileType calendar,startify,help :IndentLinesDisable
 "au BufRead *.log :command W set ro!<cr>:w<cr>
 autocmd Filetype log if getfsize(@%) > 300 | setlocal syntax=OFF | endif
+
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+nnoremap = :FormatXML<Cr>
 ]])

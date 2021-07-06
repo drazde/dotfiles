@@ -63,8 +63,8 @@ vim.o.secure=true
 vim.o.showtabline = 2                       -- Always show tabs
 vim.o.showmode = false                      -- We don't need to see things like -- INSERT -- anymore
 
-vim.o.t_Co = "256"                          -- Support 256 colors
-vim.o.termguicolors = true                  -- set term giu colors most terminals support this
+--vim.o.t_Co = "256"                          -- Support 256 colors
+--vim.o.termguicolors = true                  -- set term giu colors most terminals support this
 
 vim.o.mouse = "a"                           -- Enable your mouse
 vim.o.conceallevel = 0                      -- So that I can see `` in markdown files

@@ -12,8 +12,7 @@
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
     (position 0 18)
-    (size 1276 761)
-    (monitor 0)
+    (size 1788 1401)
     (open-on-exit)
     (aux-info
         (left-docks-width "44")
@@ -24,7 +23,7 @@
     (gimp-dock
         (side right)
         (book
-            (current-page 4)
+            (current-page 11)
             (dockable "gimp-histogram-editor"
                 (tab-style automatic))
             (dockable "gimp-navigation-view"
@@ -52,7 +51,7 @@
                 (aux-info
                     (show-button-bar "true")
                     (edit-active "true")
-                    (current-data "Da pp a sf (RGB)")))
+                    (current-data "Personalizzato")))
             (dockable "gimp-palette-list"
                 (tab-style automatic)
                 (aux-info
@@ -71,9 +70,13 @@
                 (tab-style automatic)
                 (aux-info
                     (edit-active "true")
-                    (current-data "2. Hardness 100"))))
+                    (current-data "2. Hardness 100")))
+            (dockable "gimp-gradient-list"
+                (tab-style automatic)
+                (aux-info
+                    (show-button-bar "true"))))
         (book
-            (position 317)
+            (position 351)
             (current-page 4)
             (dockable "gimp-layer-list"
                 (tab-style automatic)
@@ -105,15 +108,15 @@
     (size 890 704))
 (session-info "toplevel"
     (factory-entry "gimp-preferences-dialog")
-    (position 266 147)
+    (position 345 362)
     (size 1191 632))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 568 287)
-    (size 890 704))
+    (position 564 287)
+    (size 896 631))
 (session-info "toplevel"
     (factory-entry "gimp-image-new-dialog")
-    (position 691 444))
+    (position 685 444))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-location-dialog")
     (position 0 105))
@@ -123,8 +126,8 @@
     (monitor 0))
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
-    (position 608 159)
-    (size 890 704))
+    (position 606 159)
+    (size 896 631))
 (session-info "toplevel"
     (factory-entry "gimp-keyboard-shortcuts-dialog")
     (position 933 261)
@@ -132,7 +135,7 @@
 (session-info "toplevel"
     (factory-entry "gimp-action-search-dialog")
     (position 821 254)
-    (size 628 540))
+    (size 628 33))
 (session-info "toplevel"
     (factory-entry "gimp-text-tool-dialog")
     (position 1254 414)

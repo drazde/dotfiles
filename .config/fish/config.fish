@@ -19,6 +19,7 @@ alias photo_cat='exiftool \'-Directory<DateTimeOriginal\' -d Foto-%Y/%m-%d -r .'
 
 # nightly programs
 alias vi='$HOME/local/nvim/bin/nvim'
+alias nvim='$HOME/local/nvim/bin/nvim'
 
 
 # git doftiles

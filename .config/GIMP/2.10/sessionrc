@@ -12,7 +12,7 @@
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
     (position 0 18)
-    (size 1788 1401)
+    (size 2556 1401)
     (open-on-exit)
     (aux-info
         (left-docks-width "44")
@@ -23,7 +23,7 @@
     (gimp-dock
         (side right)
         (book
-            (current-page 11)
+            (current-page 0)
             (dockable "gimp-histogram-editor"
                 (tab-style automatic))
             (dockable "gimp-navigation-view"

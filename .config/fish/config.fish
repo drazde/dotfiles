@@ -16,6 +16,10 @@
 alias ll='ls -la'
 alias photo_cat='exiftool \'-Directory<DateTimeOriginal\' -d Foto-%Y/%m-%d -r .'
 
+# short git command
+alias gs='git s'
+alias gc='git c'
+
 
 # nightly programs
 alias vi='$HOME/local/nvim/bin/nvim'

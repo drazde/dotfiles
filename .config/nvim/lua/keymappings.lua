@@ -118,3 +118,10 @@ vim.api.nvim_set_keymap('n', '<C-F2>', ':lua require\'nv-telescope\'.grep_doc{}<
 -- Git (fugitive)
 vim.api.nvim_set_keymap('n', '<leader>gb', ':GitBlameToggle<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>gs', ':G<cr>', {noremap = true})
+
+
+-- TODO Show and Clean trailing whitespace 
+-- vim.api.nvim_set_keymap('n', '<leader>ss', '\\S\\zs\\s\\+$<cr>', {noremap = true})
+-- vim.api.nvim_set_keymap('n', '<leader>ds', ':let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <cr>', {noremap = true})
+
+

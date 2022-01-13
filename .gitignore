@@ -1,3 +1,4 @@
 .config/nvim/work.vim
+.config/nvim/lua/work.lua
 .config/nvim/autoload
 .config/nvim/plugged

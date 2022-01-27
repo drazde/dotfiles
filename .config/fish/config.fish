@@ -15,6 +15,7 @@
 # short command
 alias ll='ls -la'
 alias photo_cat='exiftool \'-Directory<DateTimeOriginal\' -d Foto-%Y/%m-%d -r .'
+alias df='df -h'
 
 # short git command
 alias gs='git s'

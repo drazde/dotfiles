@@ -14,7 +14,7 @@
 
 # short command
 alias ll='ls -la'
-alias photo_cat='exiftool \'-Directory<DateTimeOriginal\' -d Foto-%Y/%m-%d -r .'
+alias cataloga_foto='exiftool \'-Directory<DateTimeOriginal\' -d Foto-%Y/%m-%d -r .'
 alias df='df -h'
 
 # short git command
@@ -55,6 +55,7 @@ end;
 
 
 #fish_add_path "$HOME/.node_modules/bin" # fish >= 3.2.0
+set -x RIPGREP_CONFIG_PATH "$HOME/.ripgreprc"
 set -x PATH "$HOME/.node_modules/bin:$PATH"
 set -x PATH "$HOME/bin:$PATH"
 set -x PATH "$HOME/local/bin:$PATH"

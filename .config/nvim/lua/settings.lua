@@ -16,7 +16,7 @@ vim.cmd('set timeoutlen=500 ttimeoutlen=0') -- Remove timeout when hitting escap
 vim.cmd('set vb t_vb=')                     -- No more beeps
 vim.cmd('set tags=.git/tags')               -- Hide ctags in .git
 vim.cmd('set diffopt+=vertical')            -- Gdiff compare file in vertical
-vim.cmd('let g:indentLine_char = "|"')      -- IndentLine char
+vim.cmd('let g:indentLine_char = "│"')      -- IndentLine char
 
 
 vim.o.hlsearch = true                       -- Highlight search results

@@ -30,6 +30,7 @@ Plug 'frazrepo/vim-rainbow'                      " Colored parentesi
 
 " GUI enhancements
 Plug 'scrooloose/nerdtree'                       " Nerdtree
+Plug 'kyazdani42/nvim-web-devicons'              " for file icons
 Plug 'kyazdani42/nvim-tree.lua'                  " Nvim Tree
 
 Plug 'mhinz/vim-startify'                        " Start menu

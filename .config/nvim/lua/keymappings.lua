@@ -55,9 +55,13 @@ vim.cmd([[
   nnoremap <silent> <C-Right> :vertical resize +2<CR>
 ]])
 
-
+-- F1 Open work documentation (fzf)
+-- F2 Open documentation (telescope)
+-- F3 Open project file
 -- F3 Insert date and time
 vim.api.nvim_set_keymap('n', '<F3>', '<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<cr>', {noremap = true})
+-- F4 Create new buffer
+vim.api.nvim_set_keymap('n', '<F4>', ':ene<cr>', {noremap = true, silent = true})
 -- F5 Reload buffer and go at the end
 vim.api.nvim_set_keymap('n', '<F5>', ':e<cr>G', {noremap = true, silent = true})
 -- F6 Toggle highlight search result

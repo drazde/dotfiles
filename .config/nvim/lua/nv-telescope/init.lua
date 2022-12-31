@@ -78,7 +78,7 @@ M.search_doc = function()
         search_dirs = {
             path:new(vim.env.HOME, 'doc/text'):absolute(),
             path:new(vim.env.HOME, 'doc/lavoro'):absolute(),
-			path:new(vim.env.HOME, 'doc/fotografia'):absolute(),
+            path:new(vim.env.HOME, 'doc/fotografia'):absolute(),
         },
     }
     require('telescope.builtin').find_files(opts)

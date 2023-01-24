@@ -17,7 +17,8 @@
     ck = checkout
     s = status
     d = difftool
-    b = branch
+	b = branch
+	dr = "!func(){ git fetch && git diff @{upstream} --name-only; }; func"     
     lg = log --stat --graph
     last = log -1 HEAD
     f = push --force-with-lease

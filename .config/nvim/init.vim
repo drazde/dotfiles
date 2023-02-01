@@ -103,6 +103,10 @@ Plug 'lewis6991/gitsigns.nvim'                      " Show modification
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
+" ChatGPT
+Plug 'MunifTanjim/nui.nvim'
+Plug 'jackMort/ChatGPT.nvim'
+
 if executable('tmux') 
   Plug 'benmills/vimux'                             " Tmux integration
 endif

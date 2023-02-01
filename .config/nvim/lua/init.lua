@@ -43,6 +43,8 @@ require('nv-treesitter')
 -- File navigations
 require('nv-nvimtree')
 
+-- ChatGPT
+require('nv-chatgpt')
 
 -- Work only configs
 if vim.fn.has('win32') == 1 then

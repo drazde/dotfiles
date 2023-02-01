@@ -28,7 +28,7 @@
     sl = stash list
     fp = format-patch
     rm = rm --cached
-    pp = "!func(){ git pull && git push;}; func"
+    pp = "!func(){ git pull --no-edit && git push;}; func"
 
 [core]
 	editor = vim

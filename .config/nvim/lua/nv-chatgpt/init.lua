@@ -43,7 +43,7 @@ require("chatgpt").setup({
     },
   },
   openai_params = {
-    model = "text-davinci-003",
+	model = "gpt-3.5-turbo",
     frequency_penalty = 0,
     presence_penalty = 0,
     max_tokens = 300,
@@ -52,7 +52,7 @@ require("chatgpt").setup({
     n = 1,
   },
   openai_edit_params = {
-    model = "code-davinci-edit-001",
+    model = "gpt-3.5-turbo",
     temperature = 0,
     top_p = 1,
     n = 1,

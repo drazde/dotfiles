@@ -33,7 +33,7 @@ require('nv-gitsigns')
 require('lsp')
 require('lsp.python-ls')
 require('lsp.js-ts-ls')
-require('lsp.lua-ls')
+--require('lsp.lua-ls')
 
 
 -- TreeSitter

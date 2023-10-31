@@ -29,6 +29,7 @@
     fp = format-patch
     rm = rm --cached
     pp = "!func(){ git pull --no-edit && git push;}; func"
+	ro = reset --mixed HEAD~1
 
 [core]
 	editor = vim

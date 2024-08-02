@@ -1,38 +1,38 @@
+[core]
+    autocrlf = true
+
 [user]
     name = Marco Andreolli
     email = drazde@gmail.com
 
 [sendemail]
-    smtpserver = C:/Program Files (x86)/Git/mingw/bin/msmtp.exe
+    smtpserver = C:/Program Files/TortoiseGit/bin/msmtp.exe
 
 [push]
     default = simple
-
-[gui]
-    recentrepo = C:/CBA/DllOspiti
-    recentrepo = C:/CBA/Cartella Socio Sanitaria
-
 [alias]
     c = commit
     ck = checkout
     s = status
+    b = branch
     d = difftool
-	b = branch
-	dr = "!func(){ git fetch && git diff @{upstream} --name-only; }; func"     
-    lg = log --stat --graph
-    last = log -1 HEAD
+    dr = "!func(){ git fetch && git diff @{upstream} --name-only; }; func" 
+    lg = log --stat --graph                                         ; log semplificato
+    rc = reset --mixed HEAD~1                                       ; sposta il puntatore del branch attuale mantenendo le modifiche 
+    lg-my = log --stat --graph --author='Marco Andreolli'           ; log dei commit di un autore
+    lg-my-oneline = log --oneline --author='Marco Andreolli'
+    last = log -1 HEAD                                              ; ultimo commit
     f = push --force-with-lease
-        # https://stackoverflow.com/a/11688523/472927
     ss = "!f() { git stash show stash^{/$*} -p; }; f"
     sa = "!f() { git stash apply stash^{/$*}; }; f"
     sl = stash list
     fp = format-patch
     rm = rm --cached
-    pp = "!func(){ git pull --no-edit && git push;}; func"
-	ro = reset --mixed HEAD~1
-
-[core]
-	editor = vim
+    pp = "!func(){ git pull --no-edit && git push;}; func"          ; pull e push in un solo comando
+    branchdate = !git for-each-ref --sort='-authordate' --format='%(refname)%09%(authordate) %(committername)' refs/heads | sed -e 's-refs/heads/--'
+    ls-remote = ls-remote --heads                                   ; elenco dei repository presenti sull'origine remota
+    r = reset --mixed HEAD~1	                                    ; resetta l'ultimo commit, lasciando i file modificati e da committare
+    #recentrepo = "for-each-ref --sort='hci' --format='%(committerdate:relative)|%(refname:short)|%(committername)' refs\remotes\ | column -s '|' -t"
 
 [diff]
     tool = vimdiff
@@ -42,3 +42,13 @@
 
 [difftool]
     prompt = false
+	
+[safe]
+	directory = Y:/doc
+	directory = Y:/doc/lavoro
+	directory = Y:/c/.fzf
+	directory = Y:/project/git-test/github/test
+	directory = Y:/doc/snippets
+	directory = Y:/doc/fotografia
+	directory = \\\\file-server\\sorgenti-prg\\HSMARUBA_INTERFACE
+	directory = //file-server/sorgenti-prg/SIPCAR_2.0/ArmadioJVM

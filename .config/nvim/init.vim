@@ -37,7 +37,7 @@ Plug 'mhinz/vim-startify'                        " Start menu
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'   " Highlighting Nerdtree
 
 Plug 'itchyny/lightline.vim'                     " Modelines
-Plug 'Yggdroot/indentLine'                       " Indentation visualization
+Plug 'Yggdroot/indentLine'                       " Indentation visualization (char | for every tab)
 Plug 'mattn/calendar-vim'                        " Calendar
 Plug 'andymass/vim-matchup'                      " 
 
@@ -104,8 +104,8 @@ Plug 'lewis6991/gitsigns.nvim'                      " Show modification
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " ChatGPT
-Plug 'MunifTanjim/nui.nvim'
-Plug 'jackMort/ChatGPT.nvim'
+" Plug 'MunifTanjim/nui.nvim'
+" Plug 'jackMort/ChatGPT.nvim'
 
 if executable('tmux') 
   Plug 'benmills/vimux'                             " Tmux integration

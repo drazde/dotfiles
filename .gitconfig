@@ -1,5 +1,5 @@
 [core]
-    autocrlf = true
+    autocrlf = input ; il valore "true" da problemi in linux, il valore "input" dovrebbe essere piu sicuro
 
 [user]
     name = Marco Andreolli

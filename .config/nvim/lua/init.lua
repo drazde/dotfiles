@@ -5,6 +5,8 @@ O = {
 DATA_PATH = vim.fn.stdpath('data')
 CACHE_PATH = vim.fn.stdpath('cache')
 
+local is_windows = vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1
+
 -- Basic settings
 require('settings')
 require('backup')
@@ -36,15 +38,18 @@ require('lsp.js-ts-ls')
 --require('lsp.lua-ls')
 
 
--- TreeSitter
-require('nv-treesitter')
+-- TreeSitter (PS: on windows treesitter doesn't work for me..)
+if not is_windows then
+	require('nv-treesitter')
+end
 
 
 -- File navigations
 require('nv-nvimtree')
 
+
 -- ChatGPT
-require('nv-chatgpt')
+--require('nv-chatgpt')
 
 -- Work only configs
 if vim.fn.has('win32') == 1 then

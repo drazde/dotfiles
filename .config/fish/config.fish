@@ -12,6 +12,9 @@
 # show inf on my so
 #neofetch
 
+# for fish >= 3.4.0
+#fish_config theme choose "Dracula Official"
+
 # short command
 alias ll='ls -la'
 alias cataloga_foto='exiftool \'-Directory<DateTimeOriginal\' -d Foto-%Y/%m-%d -r .'
@@ -23,8 +26,8 @@ alias gc='git c'
 
 
 # nightly programs
-alias vi='$HOME/local/nvim/bin/nvim'
-alias nvim='$HOME/local/nvim/bin/nvim'
+alias vi='$HOME/local/bin/nvim'
+alias nvim='$HOME/local/bin/nvim'
 
 
 # git doftiles

@@ -33,15 +33,16 @@ require('nv-gitsigns')
 
 -- LSP
 require('lsp')
-require('lsp.python-ls')
-require('lsp.js-ts-ls')
+-- temporary remove for new config
+--require('lsp.python-ls')
+--require('lsp.js-ts-ls')
 --require('lsp.lua-ls')
 
 
 -- TreeSitter (PS: on windows treesitter doesn't work for me..)
-if not is_windows then
-	require('nv-treesitter')
-end
+--if not is_windows then
+--	require('nv-treesitter')
+--end
 
 
 -- File navigations

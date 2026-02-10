@@ -83,8 +83,8 @@ Plug 'nvim-lua/diagnostic-nvim'                     " Diagnostic for LSP
 
 " Treesitter (syntax, highlighting,...)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Code Parser
-Plug 'nvim-treesitter/playground'                   " Treesitter info 
-Plug 'p00f/nvim-ts-rainbow'                         " Nice parenthesis
+"Plug 'nvim-treesitter/playground'                   " Treesitter info 
+"Plug 'p00f/nvim-ts-rainbow'                         " Nice parenthesis
 Plug 'sheerun/vim-polyglot'                         " Language packs
 Plug 'vim-pandoc/vim-pandoc-syntax'                 " Pandoc extensions
 Plug 'terrortylor/nvim-comment'                     " Easy comment code

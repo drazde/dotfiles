@@ -48,14 +48,13 @@ vim.o.sidescrolloff=10                      -- Leave 10 char when horizontal scr
 vim.o.synmaxcol=500
 
 vim.o.mousefocus=true                       -- gvim, move focus between windows
--- UPDATE 10/02/2026: lo ho tolto perchè non esiste più il file 'mswin.vim'
---if vim.fn.has('win32') == 1 then
---    vim.cmd('source $VIMRUNTIME/mswin.vim') -- Windows Copy and Paste (also Ctrl+Ins,Shift+Ins)
+if vim.fn.has('win32') == 1 then
+    vim.cmd('source $VIMRUNTIME/mswin.vim') -- Windows Copy and Paste (also Ctrl+Ins,Shift+Ins)
 
---    vim.cmd('unmap <C-v>')
---    vim.cmd('unmap <C-a>')
---    vim.cmd('unmap <C-x>')
---end
+    vim.cmd('unmap <C-v>')
+    vim.cmd('unmap <C-a>')
+    vim.cmd('unmap <C-x>')
+end
 
 vim.o.autochdir=true                        -- chdir to dir of current buffer selected
 

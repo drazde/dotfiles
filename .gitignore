@@ -2,3 +2,7 @@
 .config/nvim/lua/work.lua
 .config/nvim/autoload
 .config/nvim/plugged
+
+container/
+.ssh/
+snap/

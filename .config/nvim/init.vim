@@ -103,9 +103,10 @@ Plug 'lewis6991/gitsigns.nvim'                      " Show modification
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
-" ChatGPT
+" ChatGPT / Copilot
 " Plug 'MunifTanjim/nui.nvim'
 " Plug 'jackMort/ChatGPT.nvim'
+Plug 'github/copilot.vim'                           " Assistent AI Copilot
 
 if executable('tmux') 
   Plug 'benmills/vimux'                             " Tmux integration

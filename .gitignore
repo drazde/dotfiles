@@ -1,8 +1,30 @@
+*
+!.
+
+!.gitignore
+!.gitconfig
+
+# Shell
+!.bashrc
+!.zshrc
+!.profile
+!.ripgreprc
+!.tmux.conf
+!.vimrc
+
+
+# Config
+!.config/
+!.config/**
+
+# config to exclude
 .config/nvim/work.vim
 .config/nvim/lua/work.lua
 .config/nvim/autoload
 .config/nvim/plugged
+.config/github-copilot/
 
-container/
+#container/
 .ssh/
 snap/
+

@@ -12,7 +12,7 @@ vim.cmd('set lazyredraw')                   -- Reduce the redraw frequency
 vim.cmd('set history=500')
 vim.cmd('set backspace=indent,eol,start')   -- http://vi.stackexchange.com/a/2163
 vim.cmd('set noerrorbells novisualbell')    -- Turn off visual and audible bells
-vim.cmd('set timeoutlen=500 ttimeoutlen=0') -- Remove timeout when hitting escape
+vim.cmd('set timeoutlen=500 ttimeoutlen=10') -- Remove timeout when hitting escape. FIX 10ms for WSL bug
 vim.cmd('set vb t_vb=')                     -- No more beeps
 vim.cmd('set tags=.git/tags')               -- Hide ctags in .git
 vim.cmd('set diffopt+=vertical')            -- Gdiff compare file in vertical

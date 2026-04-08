@@ -1,5 +1,6 @@
 # Considero il case se la parola/frase contiene caratteri in maiuscolo
 --smart-case
+--ignore-case
 
 # Considero anche i file esclusi da git 
 --no-ignore-vcs

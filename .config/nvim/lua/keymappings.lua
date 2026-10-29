@@ -22,6 +22,15 @@ vim.api.nvim_set_keymap('i', '<left>', '<nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<right>', '<nop>', {noremap = true, silent = true})
 
 
+-- Windows clipboard: Ctrl+Ins copy, Shift+Ins paste
+vim.api.nvim_set_keymap('n', '<C-Insert>', '"+yy', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<C-Insert>', '"+y', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-Insert>', '"+p', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<S-Insert>', '"+p', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<S-Insert>', '<C-r><C-o>+', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('c', '<S-Insert>', '<C-r>+', {noremap = true})
+
+
 -- Explorer
 vim.api.nvim_set_keymap('n', '<Leader>t', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeToggle %:p:h<cr>',{noremap = true, silent = true})

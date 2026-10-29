@@ -71,6 +71,21 @@ vim.o.mouse = "a"                           -- Enable your mouse
 vim.o.conceallevel = 0                      -- So that I can see `` in markdown files
 --vim.o.clipboard = "unnamedplus"             -- Copy paste between vim and everything else (overwrite clipboard)
 
+-- WSL: registers "+ and "* use the Windows clipboard
+-- win32yank.exe (if in PATH) is detected automatically, otherwise fallback to powershell
+if vim.fn.has('wsl') == 1 and vim.fn.executable('win32yank.exe') == 0 then
+    local copy = {'powershell.exe', '-NoProfile', '-NoLogo', '-Command',
+        '[Console]::InputEncoding=[Text.Encoding]::UTF8; Set-Clipboard -Value ([Console]::In.ReadToEnd() -replace "`r?`n", "`r`n")'}
+    local paste = {'powershell.exe', '-NoProfile', '-NoLogo', '-Command',
+        '[Console]::OutputEncoding=[Text.Encoding]::UTF8; [Console]::Out.Write("$(Get-Clipboard -Raw)".Replace("`r", ""))'}
+    vim.g.clipboard = {
+        name = 'WslClipboard',
+        copy = {['+'] = copy, ['*'] = copy},
+        paste = {['+'] = paste, ['*'] = paste},
+        cache_enabled = 0,
+    }
+end
+
 
 vim.o.splitbelow = true                     -- Horizontal splits will automatically be below
 vim.o.splitright = true                     -- Vertical splits will automatically be to the right

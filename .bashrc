@@ -132,10 +132,12 @@ alias gf='git fetch'
 alias gr='git ls-remote --heads'
 alias gpp='git pull --no-edit && git push'
 
-# Add cargo and local bin to PATH
-PATH="$PATH:$HOME/.cargo/bin"
-#PATH="$HOME/.local/bin:$PATH"
+# Override java 
+PATH="$HOME/jdev/sdk/jdk-25.0.3_9/bin:$PATH"
 export PATH
+
+JAVA_HOME=~/jdev/sdk/jdk-25.0.3_9
+export JAVA_HOME
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

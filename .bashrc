@@ -91,6 +91,8 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+# scorciatoie cd: "cd be", "cd fe", "cd docs" (symlink in ~/.sipcar2)
+export CDPATH=.:~/.sipcar2
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

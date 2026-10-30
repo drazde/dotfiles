@@ -52,3 +52,6 @@
 	directory = Y:/doc/fotografia
 	directory = \\\\file-server\\sorgenti-prg\\HSMARUBA_INTERFACE
 	directory = //file-server/sorgenti-prg/SIPCAR_2.0/ArmadioJVM
+
+[includeIf "gitdir:~/jdev/"]
+    path = ~/.gitconfig-lavoro
